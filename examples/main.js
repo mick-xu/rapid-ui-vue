@@ -1,10 +1,12 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-import RapidUI from "@@/components";
-import '@@/styles/index.less'
+import router from "./router";
+import store from "./store";
+import RapidUI from "@R/components";
+import "@R/styles/index.less";
 
-const app = createApp(App);
-
-app.use(RapidUI);
-
-app.mount("#app");
+createApp(App)
+  .use(store)
+  .use(router)
+  .use(RapidUI)
+  .mount("#app");
