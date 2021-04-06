@@ -17,7 +17,7 @@ module.exports = {
       .set("@", resolve("examples"))
       .set("@c", resolve("examples/components"))
       .set("@a", resolve("examples/assets"))
-      .set("@@", resolve("src"));
+      .set("@r", resolve("src"));
   },
   devServer: {
     overlay: {

@@ -1,0 +1,110 @@
+@space-8: 8px;
+@space-10: 10px;
+@space-16: 16px;
+
+.m-8 {
+  margin: @space-8;
+}
+.m-10 {
+  margin: @space-10;
+}
+.m-16 {
+  margin: @space-16;
+}
+.mv-16 {
+  margin-top: @space-16;
+  margin-bottom: @space-16;
+}
+.mh-16 {
+  margin-right: @space-16;
+  margin-left: @space-16;
+}
+.mt-8 {
+  .margin(top, @space-8);
+}
+.mt-10 {
+  .margin(top, @space-10);
+}
+.mt-16 {
+  .margin(top, @space-16);
+}
+.mr-8 {
+  .margin(right, @space-8);
+}
+.mr-10 {
+  .margin(right, @space-10);
+}
+.mr-16 {
+  .margin(right, @space-16);
+}
+.mb-8 {
+  .margin(bottom, @space-8);
+}
+.mb-10 {
+  .margin(bottom, @space-10);
+}
+.mb-16 {
+  .margin(bottom, @space-16);
+}
+.ml-8 {
+  .margin(left, @space-8);
+}
+.ml-10 {
+  .margin(left, @space-10);
+}
+.ml-16 {
+  .margin(left, @space-16);
+}
+
+.p-8 {
+  padding: @space-8;
+}
+.p-10 {
+  padding: @space-10;
+}
+.p-16 {
+  padding: @space-16;
+}
+.pt-8 {
+  .padding(top, @space-8);
+}
+.pt-10 {
+  .padding(top, @space-10);
+}
+.pt-16 {
+  .padding(top, @space-16);
+}
+.pr-8 {
+  .padding(right, @space-8);
+}
+.pr-10 {
+  .padding(right, @space-10);
+}
+.pr-16 {
+  .padding(right, @space-16);
+}
+.pb-8 {
+  .padding(bottom, @space-8);
+}
+.pb-10 {
+  .padding(bottom, @space-10);
+}
+.pb-16 {
+  .padding(bottom, @space-16);
+}
+.pl-8 {
+  .padding(left, @space-8);
+}
+.pl-10 {
+  .padding(left, @space-10);
+}
+.pl-16 {
+  .padding(left, @space-16);
+}
+
+.margin(@direction, @space) {
+  margin-@{direction}: @space;
+}
+.padding(@direction, @space) {
+  padding-@{direction}: @space;
+}
