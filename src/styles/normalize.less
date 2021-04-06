@@ -1,15 +1,45 @@
-html {
-  font-family: BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
-    "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
+.size(@width; @height) {
+  width: @width;
+  height: @height;
+}
+
+.square(@size) {
+  .size(@size; @size);
+}
+
+@{html} {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  body {
+    .square(100%);
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
 }
 
-body {
-  margin: 0;
-  padding: 0;
+input::-ms-clear,
+input::-ms-reveal {
+  display: none;
+}
+
+.clearfix() {
+  &::before {
+    display: table;
+    content: "";
+  }
+  &::after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 article,
