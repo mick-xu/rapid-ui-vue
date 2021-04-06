@@ -1,8 +1,10 @@
 <template>
-  <div class="layout-content"><slot /></div>
+  <div :class="wrapClass"><slot /></div>
 </template>
 
 <script>
+const prefixCls = "layout-content";
+import { computed } from "vue";
 export default {
   name: "Content",
   props: {
@@ -12,8 +14,13 @@ export default {
     },
     style: Object,
   },
-  setup() {
-    return {};
+  setup(props) {
+    const wrapClass = computed(() => {
+      return [`${prefixCls}`, `${props.className}`];
+    });
+    return {
+      wrapClass,
+    };
   },
 };
 </script>
