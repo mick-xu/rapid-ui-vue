@@ -1,9 +1,11 @@
+import Icon from "./Icon";
 import Layout, { Content, Footer, Header, Sider } from "./Layout";
 
 const components = {
   Content,
   Footer,
   Header,
+  Icon,
   Layout,
   Sider,
 };
