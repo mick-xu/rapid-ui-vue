@@ -1,8 +1,10 @@
+import { Col, Row } from "./Grid";
 import Icon from "./Icon";
 import Layout, { Content, Footer, Header, Sider } from "./Layout";
 import Menu, { MenuGroup, MenuItem, SubMenu } from "./Menu";
 
 const components = {
+  Col,
   Content,
   Footer,
   Header,
@@ -11,6 +13,7 @@ const components = {
   Menu,
   MenuGroup,
   MenuItem,
+  Row,
   Sider,
   SubMenu,
 };

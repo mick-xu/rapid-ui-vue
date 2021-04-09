@@ -1,10 +1,13 @@
 <template>
-  <div><Icon name="location" /></div>
+  <div></div>
 </template>
 
 <script>
+import {} from "vue";
 export default {
-  setup() {
+  name: "Navication",
+  setup(props) {
+    console.log(props);
     return {};
   },
 };

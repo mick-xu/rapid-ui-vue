@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { computed, ref, onMounted } from "vue";
+import { computed } from "vue";
 const prefixCls = "layout-sider";
 export default {
   name: "Sider",

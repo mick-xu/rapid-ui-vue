@@ -7,7 +7,7 @@ import { computed } from "vue";
 export default {
   name: "Icon",
   props: {
-    name: { type: String, default: "" },
+    name: { type: String, default: "", required: true },
     fill: { type: String, default: "#666" },
     size: { type: [Number, String], default: 20 },
   },
