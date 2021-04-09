@@ -1,5 +1,6 @@
 import Icon from "./Icon";
 import Layout, { Content, Footer, Header, Sider } from "./Layout";
+import Menu, { MenuGroup, MenuItem, SubMenu } from "./Menu";
 
 const components = {
   Content,
@@ -7,7 +8,11 @@ const components = {
   Header,
   Icon,
   Layout,
+  Menu,
+  MenuGroup,
+  MenuItem,
   Sider,
+  SubMenu,
 };
 
 const install = (Vue) => {

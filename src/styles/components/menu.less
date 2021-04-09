@@ -1,0 +1,126 @@
+@menu-prefix-cls: ~"menu";
+
+.@{menu-prefix-cls} {
+  margin-bottom: 0px;
+  margin-top: 0;
+  padding-left: 0;
+  line-height: 0;
+  outline: none;
+  transition: background 0.3s, width 0.3s cubic-bezier(0.2, 0, 0, 1) 0s;
+  .clearfix();
+
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &-hidden {
+    display: none;
+  }
+
+  &-item-group-title {
+    height: @menu-item-group-height;
+    padding: 8px 16px;
+    color: @menu-item-group-title-color;
+    font-size: @menu-item-group-title-font-size;
+    line-height: @menu-item-group-height;
+    transition: all 0.3s;
+  }
+
+  &-item,
+  &-submenu-title {
+    position: relative;
+    display: block;
+    padding: @menu-item-padding;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  &-vertical,
+  &-inline {
+    .@{menu-prefix-cls}-item {
+      position: relative;
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+
+    .@{menu-prefix-cls}-item,
+    .@{menu-prefix-cls}-submenu-title {
+      height: @menu-item-height;
+      padding: 0 16px;
+      line-height: @menu-item-height;
+    }
+  }
+
+  &-inline {
+    width: 100%;
+  }
+
+  &-horizontal {
+    line-height: @menu-horizontal-line-height;
+    border: 0;
+    // border-bottom: @border-width-base @border-style-base @border-color-split;
+    box-shadow: none;
+
+    &:not(.@{menu-prefix-cls}-dark) {
+      > .@{menu-prefix-cls}-item,
+      > .@{menu-prefix-cls}-submenu {
+        margin: @menu-item-padding;
+        margin-top: -1px;
+        margin-bottom: 0;
+        padding: @menu-item-padding;
+        padding-right: 0;
+        padding-left: 0;
+
+        &:hover,
+        &-active,
+        &-open,
+        &-selected {
+          color: @menu-highlight-color;
+          border-bottom: 2px solid @menu-highlight-color;
+        }
+      }
+    }
+
+    > .@{menu-prefix-cls}-item,
+    > .@{menu-prefix-cls}-submenu {
+      position: relative;
+      top: 1px;
+      display: inline-block;
+      vertical-align: bottom;
+      border-bottom: 2px solid transparent;
+    }
+
+    > .@{menu-prefix-cls}-submenu > .@{menu-prefix-cls}-submenu-title {
+      padding: 0;
+    }
+
+    > .@{menu-prefix-cls}-item {
+      a {
+        color: @menu-item-color;
+        &:hover {
+          color: @menu-highlight-color;
+        }
+        &::before {
+          bottom: -2px;
+        }
+      }
+      &-selected a {
+        color: @menu-highlight-color;
+      }
+    }
+
+    &::after {
+      display: block;
+      clear: both;
+      height: 0;
+      content: '\20';
+    }
+  }
+}
