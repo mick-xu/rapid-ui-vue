@@ -1,5 +1,5 @@
 <template>
-  <div><Icon name="location" /></div>
+  <div></div>
 </template>
 
 <script>
