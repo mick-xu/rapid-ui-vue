@@ -1,8 +1,10 @@
 <template>
-  <div class="layout-header"><slot /></div>
+  <div :class="wrapClass"><slot /></div>
 </template>
 
 <script>
+const prefixCls = "layout-header";
+import { computed } from "vue";
 export default {
   name: "Header",
   props: {
@@ -12,8 +14,11 @@ export default {
     },
     style: Object,
   },
-  setup() {
-    return {};
+  setup(props) {
+    const wrapClass = computed(() => {
+      return [`${prefixCls}`, `${props.className}`];
+    });
+    return { wrapClass };
   },
 };
 </script>

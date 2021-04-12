@@ -1,8 +1,34 @@
 <template>
   <Layout>
-    <Header></Header>
+    <Header>
+      <Row align="middle">
+        <Col><div class="logo">Rapid UI</div></Col>
+        <Col>
+          <Menu>
+            <MenuItem>文档</MenuItem>
+            <MenuItem>组件</MenuItem>
+          </Menu>
+        </Col>
+      </Row>
+    </Header>
     <Layout>
-      <Sider></Sider>
+      <Sider>
+        <Menu mode="vertical">
+          <MenuGroup title="通用">
+            <MenuItem>按钮</MenuItem>
+            <MenuItem>Icon 图标</MenuItem>
+          </MenuGroup>
+          <MenuGroup title="布局">
+            <MenuItem>Grid 栅格</MenuItem>
+            <MenuItem>Layout 布局</MenuItem>
+          </MenuGroup>
+          <MenuGroup title="展示">
+            <MenuItem>Card 卡片</MenuItem>
+            <MenuItem>Carousel 走马灯</MenuItem>
+            <MenuItem>Focus 焦点图</MenuItem>
+          </MenuGroup>
+        </Menu>
+      </Sider>
       <Content><router-view /></Content>
     </Layout>
     <Footer></Footer>
@@ -10,11 +36,17 @@
 </template>
 
 <script>
+import { ref, onMounted } from "vue";
 export default {
   setup() {
+    onMounted(() => {});
     return {};
   },
 };
 </script>
 
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+.logo {
+  font-size: 16px;
+}
+</style>
