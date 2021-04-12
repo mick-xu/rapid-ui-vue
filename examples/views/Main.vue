@@ -1,35 +1,39 @@
 <template>
   <Layout>
     <Header>
-      <Row align="middle">
-        <Col><div class="logo">Rapid UI</div></Col>
-        <Col>
-          <Menu>
-            <MenuItem>文档</MenuItem>
-            <MenuItem>组件</MenuItem>
-          </Menu>
-        </Col>
-      </Row>
+      <Container>
+        <Row align="middle" justify="space-between">
+          <Col><div class="logo">Rapid UI</div></Col>
+          <Col>
+            <Menu>
+              <MenuItem>文档</MenuItem>
+              <MenuItem>组件</MenuItem>
+            </Menu>
+          </Col>
+        </Row>
+      </Container>
     </Header>
     <Layout>
-      <Sider>
-        <Menu mode="vertical">
-          <MenuGroup title="通用">
-            <MenuItem>按钮</MenuItem>
-            <MenuItem>Icon 图标</MenuItem>
-          </MenuGroup>
-          <MenuGroup title="布局">
-            <MenuItem>Grid 栅格</MenuItem>
-            <MenuItem>Layout 布局</MenuItem>
-          </MenuGroup>
-          <MenuGroup title="展示">
-            <MenuItem>Card 卡片</MenuItem>
-            <MenuItem>Carousel 走马灯</MenuItem>
-            <MenuItem>Focus 焦点图</MenuItem>
-          </MenuGroup>
-        </Menu>
-      </Sider>
-      <Content><router-view /></Content>
+      <Container>
+        <Sider style="background: #f7f7f7">
+          <Menu mode="vertical">
+            <MenuGroup title="通用">
+              <MenuItem>按钮</MenuItem>
+              <MenuItem>Icon 图标</MenuItem>
+            </MenuGroup>
+            <MenuGroup title="布局">
+              <MenuItem>Grid 栅格</MenuItem>
+              <MenuItem>Layout 布局</MenuItem>
+            </MenuGroup>
+            <MenuGroup title="展示">
+              <MenuItem>Card 卡片</MenuItem>
+              <MenuItem>Carousel 走马灯</MenuItem>
+              <MenuItem>Focus 焦点图</MenuItem>
+            </MenuGroup>
+          </Menu>
+        </Sider>
+        <Content><router-view /></Content>
+      </Container>
     </Layout>
     <Footer></Footer>
   </Layout>
