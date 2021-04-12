@@ -1,7 +1,8 @@
-import { Col, Row } from "./Grid";
-import Icon from "./Icon";
-import Layout, { Content, Footer, Header, Sider } from "./Layout";
-import Menu, { MenuGroup, MenuItem, SubMenu } from "./Menu";
+import { Col, Row } from "./components/Grid";
+import Icon from "./components/Icon";
+import Layout, { Content, Footer, Header, Sider } from "./components/Layout";
+import Menu, { MenuGroup, MenuItem, SubMenu } from "./components/Menu";
+import './styles/index.less'
 
 const components = {
   Col,
