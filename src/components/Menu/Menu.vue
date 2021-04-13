@@ -1,12 +1,15 @@
 <template>
-  <ul class="menu" :class="menuClassName">
+  <ul class="menu" :class="classes">
     <slot />
   </ul>
 </template>
 
 <script>
+import { computed, reactive, provide } from "vue";
+import mitt from "mitt";
+
 const prefixCls = "menu";
-import { computed } from "vue";
+
 export default {
   name: "Menu",
   props: {
@@ -26,11 +29,22 @@ export default {
       default: () => {},
     },
   },
-  setup(props) {
-    const menuClassName = computed(() => {
+  emits: ["onClick"],
+  setup(props, { emit }) {
+    const classes = computed(() => {
       return [{ [`${prefixCls}-${props.mode}`]: props.mode }];
     });
-    return { menuClassName };
+    const emitter = mitt();
+
+    const rootMenu = reactive({ currentMenuItem: 0, emit: emitter.emit });
+    provide("rootMenu", rootMenu);
+
+    emitter.on("menuItem:click", (uid) => {
+      rootMenu.currentMenuItem = uid;
+      emit("onClick", uid);
+    });
+
+    return { classes };
   },
 };
 </script>
