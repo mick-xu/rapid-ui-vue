@@ -36,7 +36,10 @@ export default {
     });
     const emitter = mitt();
 
-    const rootMenu = reactive({ currentMenuItem: 0, emit: emitter.emit });
+    const rootMenu = reactive({
+      currentMenuItem: 0,
+      emit: emitter.emit,
+    });
     provide("rootMenu", rootMenu);
 
     emitter.on("menuItem:click", (uid) => {

@@ -1,4 +1,18 @@
+@import "../../styles/mixins/clearfix.less";
+@import "../../styles/default.less";
+
 @menu-prefix-cls: ~"menu";
+
+@menu-item-font-size: @font-size-base;
+@menu-item-padding: 0 20px;
+@menu-item-height: 40px;
+@menu-item-color: @text-color;
+@menu-highlight-color: @primary-color;
+@menu-item-active-bg: @primary-1;
+@menu-horizontal-line-height: 46px;
+@menu-item-group-height: @line-height-base;
+@menu-item-group-title-font-size: @menu-item-font-size;
+@menu-item-group-title-color: @text-color-secondary;
 
 .@{menu-prefix-cls} {
   margin-bottom: 0px;
@@ -136,6 +150,7 @@
   &-submenu-active,
   &-submenu-title:hover {
     color: @menu-highlight-color;
+    transition: color 0.3s;
   }
 
   &-item-selected {

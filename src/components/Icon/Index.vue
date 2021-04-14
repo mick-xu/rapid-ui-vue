@@ -26,8 +26,6 @@ export default {
 };
 </script>
 
-<style lang="less" scoped>
-.icon {
-  font-size: 20px;
-}
+<style lang="css" scoped>
+@import "./assets/iconfont.css";
 </style>

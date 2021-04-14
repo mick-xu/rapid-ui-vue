@@ -7,12 +7,12 @@
     @mouseenter="handleEnter"
     @mouseleave="handleLeave"
   >
-    <Icon :name="icon" v-if="showIcon" /><slot />
+    <Icon :name="icon" v-if="icon" /><slot />
   </li>
 </template>
 
 <script>
-import { toRefs, inject, computed, onMounted, getCurrentInstance } from "vue";
+import { inject, computed, getCurrentInstance } from "vue";
 import Icon from "../Icon";
 const prefixCls = "menu";
 export default {
@@ -22,8 +22,7 @@ export default {
     icon: { type: String, default: "" },
     title: { type: String, default: "" },
   },
-  setup(props) {
-    const { icon } = toRefs(props);
+  setup() {
     const rootMenu = inject("rootMenu");
     const instance = getCurrentInstance();
     const classes = computed(() => {
@@ -31,20 +30,15 @@ export default {
         [`${prefixCls}-item-selected`]: rootMenu.currentMenuItem === instance.uid,
       };
     });
-    const showIcon = icon != "";
 
     const handleClick = () => {
       classes.value["menu-item-selected"] = true;
       rootMenu.emit("menuItem:click", instance.uid);
     };
-
     const handleEnter = () => {};
     const handleLeave = () => {};
 
-    onMounted(() => {});
-
     return {
-      showIcon,
       classes,
       handleClick,
       handleEnter,

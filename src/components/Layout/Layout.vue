@@ -1,5 +1,5 @@
 <template>
-  <div :class="wrapClass" ref="layout"><slot /></div>
+  <div :class="classes" ref="layout"><slot /></div>
 </template>
 
 <script>
@@ -14,7 +14,7 @@ export default {
   setup(props) {
     let hasSider = ref(false);
     const layout = ref(null);
-    const wrapClass = computed(() => {
+    const classes = computed(() => {
       return [
         `${prefixCls}`,
         `${props.className}`,
@@ -27,11 +27,9 @@ export default {
         .some((el) => el.className.startsWith(`${prefixCls}-sider`));
     });
     return {
-      wrapClass,
+      classes,
       layout,
     };
   },
 };
 </script>
-
-<style lang="less" scoped></style>
