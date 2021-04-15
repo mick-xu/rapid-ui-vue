@@ -1,5 +1,5 @@
 <template>
-  <div :class="wrapClass" :style="wrapStyle"><slot /></div>
+  <div :class="classes" :style="styles"><slot /></div>
 </template>
 
 <script>
@@ -11,7 +11,7 @@ export default {
     breakpoint: {
       type: String,
       validator(val) {
-        return oneOf(val, ["xs", "sm", "md", "lg", "xl", "xxl"]);
+        return ["xs", "sm", "md", "lg", "xl", "xxl"].includes(val);
       },
     },
     className: { type: String, default: "" },
@@ -26,19 +26,17 @@ export default {
   },
   setup(props) {
     const siderWidth = computed(() => props.width);
-    const wrapStyle = computed(() => {
+    const styles = computed(() => {
       return {
         width: `${siderWidth.value}px`,
         ...props.style,
       };
     });
-    const wrapClass = computed(() => [`${prefixCls}`, `${props.className}`]);
+    const classes = computed(() => [`${prefixCls}`, `${props.className}`]);
     return {
-      wrapClass,
-      wrapStyle,
+      classes,
+      styles,
     };
   },
 };
 </script>
-
-<style lang="less" scoped></style>

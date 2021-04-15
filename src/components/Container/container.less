@@ -1,0 +1,55 @@
+@import "../../styles/default.less";
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  flex: inherit;
+  display: inherit;
+}
+
+@media screen and (min-width: @screen-sm-min) {
+  .container,
+  .container-xs {
+    max-width: 540px;
+  }
+}
+
+@media screen and (min-width: @screen-md-min) {
+  .container,
+  .container-sm,
+  .container-xs {
+    max-width: 720px;
+  }
+}
+
+@media screen and (min-width: @screen-lg-min) {
+  .container,
+  .container-md,
+  .container-sm,
+  .container-xs {
+    max-width: 960px;
+  }
+}
+
+@media screen and (min-width: @screen-xl-min) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xs {
+    max-width: 1140px;
+  }
+}
+
+@media screen and (min-width: @screen-xxl-min) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xs,
+  .container-xxl {
+    max-width: 1320px;
+  }
+}

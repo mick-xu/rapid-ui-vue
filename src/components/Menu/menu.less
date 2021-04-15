@@ -1,4 +1,18 @@
+@import "../../styles/mixins/clearfix.less";
+@import "../../styles/default.less";
+
 @menu-prefix-cls: ~"menu";
+
+@menu-item-font-size: @font-size-base;
+@menu-item-padding: 0 20px;
+@menu-item-height: 40px;
+@menu-item-color: @text-color;
+@menu-highlight-color: @primary-color;
+@menu-item-active-bg: @primary-1;
+@menu-horizontal-line-height: 46px;
+@menu-item-group-height: @line-height-base;
+@menu-item-group-title-font-size: @menu-item-font-size;
+@menu-item-group-title-color: @text-color-secondary;
 
 .@{menu-prefix-cls} {
   margin-bottom: 0px;
@@ -21,12 +35,13 @@
   }
 
   &-item-group-title {
-    height: @menu-item-group-height;
+    height: @menu-item-height;
     padding: 8px 16px;
     color: @menu-item-group-title-color;
     font-size: @menu-item-group-title-font-size;
     line-height: @menu-item-group-height;
     transition: all 0.3s;
+    border-bottom: @border-width-base @border-style-base @border-color-split;
   }
 
   &-item,
@@ -55,6 +70,11 @@
       height: @menu-item-height;
       padding: 0 16px;
       line-height: @menu-item-height;
+    }
+
+    .no-space {
+      padding-right: 0;
+      padding-left: 0;
     }
   }
 
@@ -120,7 +140,28 @@
       display: block;
       clear: both;
       height: 0;
-      content: '\20';
+      content: "\20";
     }
+  }
+
+  &-item:hover,
+  &-item-active,
+  &:not(&-inline) &-submenu-open,
+  &-submenu-active,
+  &-submenu-title:hover {
+    color: @menu-highlight-color;
+    transition: color 0.3s;
+  }
+
+  &-item-selected {
+    color: @menu-highlight-color;
+    a,
+    a:hover {
+      color: @menu-highlight-color;
+    }
+  }
+
+  &:not(&-horizontal) &-item-selected {
+    background-color: @menu-item-active-bg;
   }
 }
