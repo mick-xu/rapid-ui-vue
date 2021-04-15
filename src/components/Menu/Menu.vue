@@ -42,9 +42,9 @@ export default {
     });
     provide("rootMenu", rootMenu);
 
-    emitter.on("menuItem:click", (uid) => {
-      rootMenu.currentMenuItem = uid;
-      emit("onClick", uid);
+    emitter.on("menuItem:click", (item) => {
+      rootMenu.currentMenuItem = item.uid;
+      emit("onClick", item.name);
     });
 
     return { classes };

@@ -21,8 +21,9 @@ export default {
   props: {
     icon: { type: String, default: "" },
     title: { type: String, default: "" },
+    name: { type: String, default: "" },
   },
-  setup() {
+  setup(props) {
     const rootMenu = inject("rootMenu");
     const instance = getCurrentInstance();
     const classes = computed(() => {
@@ -33,7 +34,7 @@ export default {
 
     const handleClick = () => {
       classes.value["menu-item-selected"] = true;
-      rootMenu.emit("menuItem:click", instance.uid);
+      rootMenu.emit("menuItem:click", { uid: instance.uid, name: props.name });
     };
     const handleEnter = () => {};
     const handleLeave = () => {};
