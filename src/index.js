@@ -1,10 +1,13 @@
+import Button from "./components/Button";
 import Container from "./components/Container";
 import { Col, Row } from "./components/Grid";
 import Icon from "./components/Icon";
 import Layout, { Content, Footer, Header, Sider } from "./components/Layout";
 import Menu, { MenuGroup, MenuItem, SubMenu } from "./components/Menu";
+import "./styles/index.less";
 
 const components = {
+  Button,
   Col,
   Container,
   Content,
@@ -25,12 +28,10 @@ const install = (Vue) => {
   Object.keys(components).forEach((key) => {
     Vue.component(key, components[key]);
   });
-  install.installed = true;
 };
 
 if (typeof window !== "undefined" && window.Vue) {
   install(window.Vue);
-  install.installed = true;
 }
 
 export default { install, ...components };

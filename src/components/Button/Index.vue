@@ -1,8 +1,12 @@
 <template>
-  <button :type="htmlType" class="btn" :class="typeClass"><slot /></button>
+  <button :type="htmlType" class="btn" :class="classes" @click="hanldeClick">
+    <slot />
+  </button>
 </template>
 
 <script>
+import { computed } from "vue";
+const prefixCls = "btn";
 export default {
   props: {
     block: {
@@ -24,6 +28,9 @@ export default {
     size: {
       type: String,
       default: "middle",
+      validator: (val) => {
+        return ["large", "middle", "small"].includes(val);
+      },
     },
     type: {
       type: String,
@@ -33,10 +40,21 @@ export default {
       },
     },
   },
-  setup(props) {
-    const typeClass = `btn-${props.type}`;
+  emits: ["onClick"],
+  setup(props, { emit }) {
+    const classes = computed(() => {
+      return [
+        `${prefixCls}-${props.type}`,
+        { [`${prefixCls}-lg`]: props.size === "large" },
+        { [`${prefixCls}-sm`]: props.size === "small" },
+      ];
+    });
+    const hanldeClick = (event) => {
+      emit("onClick", event);
+    };
     return {
-      typeClass,
+      classes,
+      hanldeClick,
     };
   },
 };

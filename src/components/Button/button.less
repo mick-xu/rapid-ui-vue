@@ -1,0 +1,61 @@
+@import "../../styles/color/colors.less";
+@import "../../styles/mixins/index.less";
+
+@btn-prefix: btn;
+
+.btn-color(@color) {
+  color: @btn-primary-color;
+  background-color: @color;
+  border-color: @color;
+  &:hover,
+  &:active {
+    color: @btn-primary-color;
+  }
+}
+
+.@{btn-prefix} {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  background-image: none;
+  touch-action: manipulation;
+  line-height: @btn-line-height;
+  .btn();
+
+  &::before {
+    position: absolute;
+    z-index: 1;
+    display: none;
+    opacity: 0.35;
+    border-radius: inherit;
+    content: "";
+    pointer-events: none;
+  }
+
+  &-success {
+    .btn-color(@success-color);
+  }
+
+  &-warning {
+    .btn-color(@warning-color);
+  }
+
+  &-danger {
+    .btn-color(@error-color);
+  }
+
+  &-info {
+    .btn-color(@info-color);
+  }
+
+  &-block {
+    width: 100%;
+  }
+
+  & + & {
+    margin-left: 8px;
+  }
+}
