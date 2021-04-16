@@ -16,13 +16,13 @@ yarn add rapid-ui-vue
 打开 main.js 文件
 
 ```jsx
+import { createApp } from "vue";
+import App from "./App.vue";
 import RapidUI from "rapid-ui-vue";
 import 'rapid-ui-vue/lib/rapid-ui-vue.css' // 引入样式
 
 createApp(App)
   .use(RapidUI)
-  .use(store)
-  .use(router)
   .mount("#app");
 ```
 
