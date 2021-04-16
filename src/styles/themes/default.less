@@ -14,9 +14,24 @@
 @font-size-sm: 12px;
 @line-height-base: 1.5715;
 @border-radius-base: 2px;
+@font-variant-base: tabular-nums;
+@heading-color: fade(@black, 85%);
+@icon-color-hover: fade(@black, 75%);
 
-// Color
+// Colors
 @primary-color: @blue-6;
+@error-color: @red-5;
+@info-color: @primary-color;
+@success-color: @green-6;
+@processing-color: @blue-6;
+@error-color: @red-5;
+@highlight-color: @red-5;
+@warning-color: @gold-6;
+@normal-color: #d9d9d9;
+@default-color: #eee;
+@light-color: #f6f6f6;
+@dark-color: #333;
+
 @primary-1: color(~`colorPalette("@{primary-color}", 1) `);
 
 // Radio
@@ -40,6 +55,13 @@
 @padding-sm: 12px;
 @padding-xs: 8px;
 @padding-xss: 4px;
+
+// margins
+@margin-lg: 24px;
+@margin-md: 16px;
+@margin-sm: 12px;
+@margin-xs: 8px;
+@margin-xss: 4px;
 
 // Animation
 @ease-base-out: cubic-bezier(0.7, 0.3, 0.1, 1);

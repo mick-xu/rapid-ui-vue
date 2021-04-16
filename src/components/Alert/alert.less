@@ -1,0 +1,151 @@
+@import "../../styles/mixins/index.less";
+@import "../../styles/themes/default.less";
+
+@alert-prefix: alert;
+
+@alert-default-border-color: fade(@default-color, 99%);
+@alert-default-bg-color: fade(@default-color, 30%);
+@alert-default-icon-color: @default-color;
+
+@alert-dark-border-color: fade(@dark-color, 100%);
+@alert-dark-bg-color: fade(@dark-color, 85%);
+@alert-dark-icon-color: @dark-color;
+@alert-dark-text-color: @light-color;
+
+@alert-success-border-color: ~`colorPalette("@{success-color}", 3) `;
+@alert-success-bg-color: ~`colorPalette("@{success-color}", 1) `;
+@alert-success-icon-color: @success-color;
+
+@alert-info-border-color: ~`colorPalette("@{info-color}", 3) `;
+@alert-info-bg-color: ~`colorPalette("@{info-color}", 1) `;
+@alert-info-icon-color: @info-color;
+
+@alert-warning-border-color: ~`colorPalette("@{warning-color}", 3) `;
+@alert-warning-bg-color: ~`colorPalette("@{warning-color}", 1) `;
+@alert-warning-icon-color: @warning-color;
+
+@alert-error-border-color: ~`colorPalette("@{error-color}", 3) `;
+@alert-error-bg-color: ~`colorPalette("@{error-color}", 1) `;
+@alert-error-icon-color: @error-color;
+
+@alert-message-color: @heading-color;
+@alert-text-color: @text-color;
+@alert-close-color: @text-color-secondary;
+@alert-close-hover-color: @icon-color-hover;
+@alert-no-icon-padding-vertical: @padding-xs;
+@alert-with-description-no-icon-padding-vertical: @padding-md - 1px;
+@alert-with-description-padding-vertical: @padding-md - 1px;
+@alert-with-description-padding: @alert-with-description-padding-vertical 15px
+  @alert-with-description-no-icon-padding-vertical
+  @alert-with-description-icon-size;
+@alert-icon-top: 8px + @font-size-base * (@line-height-base / 2) -
+  (@font-size-base / 2);
+@alert-with-description-icon-size: 24px;
+
+.@{alert-prefix} {
+  .reset-component();
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  word-wrap: break-word;
+  &-content {
+    flex: 1;
+    min-width: 0;
+  }
+  &-icon {
+    margin-right: @margin-xs;
+  }
+  &-description {
+    display: none;
+    font-size: @font-size-base;
+    line-height: @font-size-base + 8px;
+  }
+
+  &-default {
+    background-color: @alert-default-bg-color;
+    border: @border-width-base @border-style-base @alert-default-border-color;
+    .@{alert-prefix}-icon {
+      color: @alert-default-icon-color;
+    }
+  }
+
+  &-dark {
+    background-color: @alert-dark-bg-color;
+    border: @border-width-base @border-style-base @alert-dark-border-color;
+    color: @alert-dark-text-color;
+    .@{alert-prefix}-icon {
+      color: @alert-dark-icon-color;
+    }
+  }
+
+  &-success {
+    background-color: @alert-success-bg-color;
+    border: @border-width-base @border-style-base @alert-success-border-color;
+    .@{alert-prefix}-icon {
+      color: @alert-success-icon-color;
+    }
+  }
+
+  &-info {
+    background-color: @alert-info-bg-color;
+    border: @border-width-base @border-style-base @alert-info-border-color;
+    .@{alert-prefix}-icon {
+      color: @alert-info-icon-color;
+    }
+  }
+
+  &-warning {
+    background-color: @alert-warning-bg-color;
+    border: @border-width-base @border-style-base @alert-warning-border-color;
+    .@{alert-prefix}-icon {
+      color: @alert-warning-icon-color;
+    }
+  }
+
+  &-error {
+    background-color: @alert-error-bg-color;
+    border: @border-width-base @border-style-base @alert-error-border-color;
+
+    .@{alert-prefix}-icon {
+      color: @alert-error-icon-color;
+    }
+
+    .@{alert-prefix}-description > pre {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &-action {
+    margin-left: @margin-xs;
+  }
+
+  &-close-icon {
+    margin-left: @margin-xs;
+    padding: 0;
+    overflow: hidden;
+    font-size: @font-size-sm;
+    line-height: @font-size-sm;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    .@{iconfont-css-prefix}-close {
+      color: @alert-close-color;
+      transition: color 0.3s;
+      &:hover {
+        color: @alert-close-hover-color;
+      }
+    }
+  }
+
+  &-close-text {
+    color: @alert-close-color;
+    transition: color 0.3s;
+    &:hover {
+      color: @alert-close-hover-color;
+    }
+  }
+}

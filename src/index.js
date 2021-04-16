@@ -1,3 +1,4 @@
+import Alert from "./components/Alert";
 import Button from "./components/Button";
 import Container from "./components/Container";
 import { Col, Row } from "./components/Grid";
@@ -7,6 +8,7 @@ import Menu, { MenuGroup, MenuItem, SubMenu } from "./components/Menu";
 import "./styles/index.less";
 
 const components = {
+  Alert,
   Button,
   Col,
   Container,

@@ -1,8 +1,9 @@
 <template>
-  <div></div>
+  <div class="alert" :class="classes">{{ message }}</div>
 </template>
 
 <script>
+import { computed } from "vue";
 export default {
   name: "Alert",
   props: {
@@ -10,7 +11,7 @@ export default {
       type: String,
       default: "info",
       validator: (val) => {
-        return ["default", "info", "success", "warning", "error"].includes(val);
+        return ["default", "dark", "info", "success", "warning", "error"].includes(val);
       },
     },
     message: String,
@@ -22,16 +23,14 @@ export default {
     showIcon: Boolean,
     icon: String,
   },
-
   emits: ["onClose"],
-
-  setup(props, ctx) {
-    const typeClass = `alert-${props.type}`;
-    const onClose = (evt) => {
-      ctx.emit("onClose", evt);
+  setup(props, { emit }) {
+    const classes = computed(() => `alert-${props.type}`);
+    const onClose = (event) => {
+      emit("onClose", event);
     };
     return {
-      typeClass,
+      classes,
       onClose,
     };
   },
