@@ -5,6 +5,7 @@ import { Col, Row } from "./components/Grid";
 import Icon from "./components/Icon";
 import Layout, { Content, Footer, Header, Sider } from "./components/Layout";
 import Menu, { MenuGroup, MenuItem, SubMenu } from "./components/Menu";
+import Space from "./components/Space";
 import "./styles/index.less";
 
 const components = {
@@ -22,6 +23,7 @@ const components = {
   MenuItem,
   Row,
   Sider,
+  Space,
   SubMenu,
 };
 
