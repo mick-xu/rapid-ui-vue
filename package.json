@@ -11,9 +11,9 @@
     "website",
     "mobile",
     "component",
-    "frontend",
     "vue",
-    "vue-component"
+    "vue-component",
+    "front-end"
   ],
   "repository": {
     "type": "git",
@@ -26,7 +26,7 @@
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "precommit": "lint-staged",
-    "lib": "vue-cli-service build --target lib --name rapid-ui-vue --dest lib src/index.js"
+    "lib": "vue-cli-service build --target lib --name rapid-ui --dest lib src/index.js"
   },
   "peerDependencies": {
     "vue": "^3.0.10"
@@ -44,10 +44,12 @@
     "@vue/test-utils": "^2.0.0-0",
     "babel-eslint": "^10.1.0",
     "chai": "^4.1.2",
+    "copy-to-clipboard": "^3.3.1",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0",
+    "highlight.js": "^10.7.2",
     "less": "^4.1.1",
-    "less-loader": "^8.0.0",
+    "less-loader": "^5.0.0",
     "lint-staged": "^9.5.0",
     "vue": "^3.0.10",
     "vue-router": "^4.0.5",

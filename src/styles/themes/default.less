@@ -1,0 +1,109 @@
+@import "../color/colors.less";
+
+@theme: default;
+@html: html;
+@prefix: "rapid";
+
+@font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+@text-color: fade(@black, 85%);
+@text-color-secondary: fade(@black, 45%);
+@font-size-base: 14px;
+@font-size-lg: @font-size-base + 2px;
+@font-size-sm: 12px;
+@line-height-base: 1.5715;
+@border-radius-base: 2px;
+@font-variant-base: tabular-nums;
+@heading-color: fade(@black, 85%);
+@icon-color-hover: fade(@black, 75%);
+
+// Colors
+@primary-color: @blue-6;
+@error-color: @red-5;
+@info-color: @primary-color;
+@success-color: @green-6;
+@processing-color: @blue-6;
+@error-color: @red-5;
+@highlight-color: @red-5;
+@warning-color: @gold-6;
+@normal-color: #d9d9d9;
+@default-color: #eee;
+@light-color: #f6f6f6;
+@dark-color: #333;
+
+@primary-1: color(~`colorPalette("@{primary-color}", 1) `);
+
+// Radio
+@radio-size: 16px;
+
+// Border
+@border-color-split: hsv(0, 0, 94%);
+@border-width-base: 1px;
+@border-style-base: solid;
+
+// height
+@height-base: 32px;
+@height-lg: 40px;
+@height-sm: 24px;
+
+@iconfont-css-prefix: anticon;
+
+// padding
+@padding-lg: 24px;
+@padding-md: 16px;
+@padding-sm: 12px;
+@padding-xs: 8px;
+@padding-xss: 4px;
+
+// margins
+@margin-lg: 24px;
+@margin-md: 16px;
+@margin-sm: 12px;
+@margin-xs: 8px;
+@margin-xss: 4px;
+
+// Animation
+@ease-base-out: cubic-bezier(0.7, 0.3, 0.1, 1);
+@ease-base-in: cubic-bezier(0.9, 0, 0.3, 0.7);
+@ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+@ease-in: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+@ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+@ease-out-back: cubic-bezier(0.12, 0.4, 0.29, 1.46);
+@ease-in-back: cubic-bezier(0.71, -0.46, 0.88, 0.6);
+@ease-in-out-back: cubic-bezier(0.71, -0.46, 0.29, 1.46);
+@ease-out-circ: cubic-bezier(0.08, 0.82, 0.17, 1);
+@ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.34);
+@ease-in-out-circ: cubic-bezier(0.78, 0.14, 0.15, 0.86);
+@ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+@ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+@ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
+
+// Screen
+@screen-xs: 480px;
+@screen-xs-min: @screen-xs;
+@screen-xs-max: (@screen-sm-min - 1px);
+
+@screen-sm: 576px;
+@screen-sm-min: @screen-sm;
+@screen-sm-max: (@screen-md-min - 1px);
+
+@screen-md: 768px;
+@screen-md-min: @screen-md;
+@screen-md-max: (@screen-lg-min - 1px);
+
+@screen-lg: 992px;
+@screen-lg-min: @screen-lg;
+@screen-lg-max: (@screen-xl-min - 1px);
+
+@screen-xl: 1200px;
+@screen-xl-min: @screen-xl;
+@screen-xl-max: (@screen-xl-min - 1px);
+
+@screen-xxl: 1400px;
+@screen-xxl-min: @screen-xxl;
+@screen-xxl-max: (@screen-xxl-min - 1px);
+
+@screen-xxxl: 1600px;
+@screen-xxxl-min: @screen-xxxl;
+@screen-xxxl-max: (@screen-xxxl-min - 1px);

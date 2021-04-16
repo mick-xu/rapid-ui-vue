@@ -1,0 +1,113 @@
+@import "../../styles/themes/default.less";
+
+@btn-font-weight: 400;
+@btn-border-width: @border-width-base;
+@btn-border-style: @border-style-base;
+@btn-line-height: @line-height-base;
+@btn-height-base: @height-base;
+@btn-height-lg: @height-lg;
+@btn-height-sm: @height-sm;
+@btn-padding-horizontal-base: @padding-md - 1px;
+@btn-padding-horizontal-lg: @btn-padding-horizontal-base;
+@btn-padding-horizontal-sm: @padding-xs - 1px;
+@btn-border-radius-base: @border-radius-base;
+@btn-border-radius-sm: @border-radius-base;
+@btn-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+@btn-font-size-lg: @font-size-lg;
+@btn-font-size-sm: @font-size-base;
+@btn-primary-color: #fff;
+
+.button-size(@height; @padding-horizontal; @font-size; @border-radius) {
+  @padding-vertical: max(
+    (round(((@height - @font-size * @line-height-base) / 2) * 10) / 10) -
+      @border-width-base,
+    0
+  );
+  height: @height;
+  padding: @padding-vertical @padding-horizontal;
+  font-size: @font-size;
+  border-radius: @border-radius;
+}
+
+.button-disabled(@color: @btn-disable-color; @background: @btn-disable-bg; @border: @btn-disable-border) {
+  &[disabled] {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      .button-color(@color; @background; @border);
+      text-shadow: none;
+      box-shadow: none;
+    }
+  }
+}
+
+.button-color(@color; @background; @border) {
+  color: @color;
+  background: @background;
+  border-color: @border;
+  > a:only-child {
+    color: currentColor;
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: transparent;
+      content: "";
+    }
+  }
+}
+
+.btn() {
+  position: relative;
+  display: inline-block;
+  font-weight: @btn-font-weight;
+  white-space: nowrap;
+  text-align: center;
+  background-image: none;
+  border: @btn-border-width @btn-border-style transparent;
+  box-shadow: @btn-shadow;
+  cursor: pointer;
+  transition: all 0.3s @ease-in-out;
+  user-select: none;
+  touch-action: manipulation;
+  .button-size(
+    @btn-height-base; @btn-padding-horizontal-base; @font-size-base;
+      @btn-border-radius-base;
+  );
+  > .@{iconfont-css-prefix} {
+    line-height: 1;
+  }
+  &,
+  &:active,
+  &:focus {
+    outline: 0;
+  }
+  &:not([disabled]):hover {
+    text-decoration: none;
+  }
+  &:not([disabled]):active {
+    outline: 0;
+    box-shadow: none;
+  }
+  &[disabled] {
+    cursor: not-allowed;
+    > * {
+      pointer-events: none;
+    }
+  }
+  &-lg {
+    .button-size(
+      @btn-height-lg; @btn-padding-horizontal-lg; @btn-font-size-lg;
+        @btn-border-radius-base
+    );
+  }
+  &-sm {
+    .button-size(
+      @btn-height-sm; @btn-padding-horizontal-sm; @btn-font-size-sm;
+        @btn-border-radius-sm
+    );
+  }
+}
