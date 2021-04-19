@@ -19,7 +19,7 @@ yarn add rapid-ui-vue
 import { createApp } from "vue";
 import App from "./App.vue";
 import RapidUI from "rapid-ui-vue";
-import 'rapid-ui-vue/lib/rapid-ui-vue.css' // 引入样式
+import 'rapid-ui-vue/lib/rapid-ui.css' // 引入样式
 
 createApp(App)
   .use(RapidUI)
