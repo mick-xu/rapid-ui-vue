@@ -1,5 +1,5 @@
 <template>
-  <div class="rapid-col" :style="styles"><slot /></div>
+  <div :class="classes" :style="styles"><slot /></div>
 </template>
 
 <script>
@@ -23,16 +23,18 @@ export default {
     xl: [Number, String],
     xxl: [Number, String],
   },
-  setup() {
+  setup(props) {
     const { gutter } = inject("gutter", { gutter: { value: 0 } });
-    console.log(gutter.value);
     const styles = computed(() => {
       const wrapPadding = gutter.value
         ? { paddingLeft: `${gutter.value / 2}px`, paddingRight: `${gutter.value / 2}px` }
         : {};
       return wrapPadding;
     });
-    return { styles };
+    const classes = computed(() => {
+      return ["rapid-col", { [`rapid-col-${props.span}`]: props.span }];
+    });
+    return { styles, classes };
   },
 };
 </script>
