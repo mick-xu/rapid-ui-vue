@@ -1,10 +1,10 @@
 {
-  "_id": "rapid-ui@0.0.3",
+  "_id": "rapid-ui@0.0.5",
   "name": "rapid-ui-vue",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "private": false,
   "description": "快速创建响应式网站的 UI 库，擅长企业站、商城、论坛、博客等互联网 Web 项目，支持移动端",
-  "main": "lib/rapid-ui-vue.umd.min.js",
+  "main": "lib/rapid-ui.umd.min.js",
   "homepage": "https://github.com/mick-xu/rapid-ui-vue.git",
   "keywords": [
     "rapid",
