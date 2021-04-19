@@ -1,5 +1,6 @@
 import Alert from "./components/Alert";
 import Button from "./components/Button";
+import Card from "./components/Card";
 import Container from "./components/Container";
 import { Col, Row } from "./components/Grid";
 import Icon from "./components/Icon";
@@ -11,6 +12,7 @@ import "./styles/index.less";
 const components = {
   Alert,
   Button,
+  Card,
   Col,
   Container,
   Content,
