@@ -1,4 +1,5 @@
-import Main from "../views/Main.vue";
+import Main from "@/views/Main.vue";
+import Components from "@/views/components/Index";
 
 export default [
   {
@@ -46,7 +47,7 @@ export default [
         path: "common",
         name: "common",
         title: "通用",
-        component: () => import("@/views/components/Index"),
+        component: Components,
         children: [
           {
             path: "button",
@@ -66,7 +67,7 @@ export default [
         path: "layouts",
         name: "layouts",
         title: "布局",
-        component: () => import("@/views/components/Index"),
+        component: Components,
         children: [
           {
             path: "grid",
@@ -83,10 +84,24 @@ export default [
         ],
       },
       {
+        path: "tips",
+        name: "tips",
+        title: "提示",
+        component: Components,
+        children: [
+          {
+            path: "alert",
+            name: "alert",
+            title: "Alert 警告",
+            component: () => import("@/views/components/Alert"),
+          },
+        ],
+      },
+      {
         path: "display",
         name: "display",
         title: "展示",
-        component: () => import("@/views/components/Index"),
+        component: Components,
         children: [
           {
             path: "card",
