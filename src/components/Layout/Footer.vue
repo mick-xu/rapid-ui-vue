@@ -1,5 +1,7 @@
 <template>
-  <div :class="wrapClass"><slot /></div>
+  <div :class="classes" :style="styles">
+    <slot> </slot>
+  </div>
 </template>
 
 <script>
@@ -12,14 +14,16 @@ export default {
       type: String,
       default: "",
     },
-    style: Object,
+    style: { type: [Object, String], default: () => {} },
   },
   setup(props) {
-    const wrapClass = computed(() => {
+    const classes = computed(() => {
       return [`${prefixCls}`, `${props.className}`];
     });
+    const styles = computed(() => props.style);
     return {
-      wrapClass,
+      classes,
+      styles,
     };
   },
 };
