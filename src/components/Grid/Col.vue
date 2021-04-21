@@ -1,8 +1,9 @@
 <template>
-  <div class="rapid-col"><slot /></div>
+  <div :class="classes" :style="styles"><slot /></div>
 </template>
 
 <script>
+import { inject, computed } from "vue";
 export default {
   name: "Col",
   props: {
@@ -22,8 +23,16 @@ export default {
     xl: [Number, String],
     xxl: [Number, String],
   },
-  setup() {
-    return {};
+  setup(props) {
+    const { gutter } = inject("gutter", { gutter: { value: 0 } });
+    const styles = computed(() => {
+      const wrapPadding = gutter.value ? { padding: `${gutter.value / 2}px` } : {};
+      return wrapPadding;
+    });
+    const classes = computed(() => {
+      return ["rapid-col", { [`rapid-col-${props.span}`]: props.span }];
+    });
+    return { styles, classes };
   },
 };
 </script>

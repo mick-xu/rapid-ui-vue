@@ -1,6 +1,8 @@
 import Alert from "./components/Alert";
 import Button from "./components/Button";
+import Card from "./components/Card";
 import Container from "./components/Container";
+import Focus, { FocusItem } from "./components/Focus";
 import { Col, Row } from "./components/Grid";
 import Icon from "./components/Icon";
 import Layout, { Content, Footer, Header, Sider } from "./components/Layout";
@@ -11,9 +13,12 @@ import "./styles/index.less";
 const components = {
   Alert,
   Button,
+  Card,
   Col,
   Container,
   Content,
+  Focus,
+  FocusItem,
   Footer,
   Header,
   Icon,

@@ -1,9 +1,9 @@
 <template>
-  <div class="rapid-row" :class="classes"><slot /></div>
+  <div class="rapid-row" :class="classes" :style="styles"><slot /></div>
 </template>
 
 <script>
-import { computed } from 'vue'
+import { computed, provide } from "vue";
 const prefixCls = "rapid";
 export default {
   name: "Row",
@@ -17,7 +17,7 @@ export default {
     },
     gutter: {
       type: [Number, Object, Array],
-      default: 0,
+      default: 16,
     },
     justify: {
       type: String,
@@ -39,8 +39,28 @@ export default {
         [`${prefixCls}-row-${props.align}`]: props.align,
       };
     });
+    const gutter = computed(() => props.gutter);
+    provide("gutter", { gutter });
+    let wrapMargin;
+    const styles = computed(() => {
+      if (typeof props.gutter === "number") {
+        if (props.gutter <= 0) {
+          wrapMargin = {};
+        } else {
+          wrapMargin = {
+            margin: `-${props.gutter / 2}px`,
+          };
+        }
+      } else if (Array.isArray(props.gutter) && props.gutter.length === 2) {
+        wrapMargin = {
+          margin: `${props.gutter[0] / 2}px ${props.gutter[1] / 2}px`,
+        };
+      }
+      return wrapMargin;
+    });
     return {
       classes,
+      styles,
     };
   },
 };

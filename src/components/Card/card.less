@@ -1,0 +1,42 @@
+@import "../../styles/mixins/index.less";
+
+@card-prefix: card;
+
+@card-padding: 16px;
+@card-head-padding: 16px;
+
+.@{card-prefix} {
+  position: relative;
+  .reset-component();
+
+  &-bordered {
+    border: @border-width-base @border-style-base @border-color-split;
+  }
+
+  &-header {
+    font-weight: 500;
+    padding: 0 @card-head-padding;
+    border-bottom: @border-width-base @border-style-base @border-color-split;
+    &-title {
+      padding: ~"calc(@{card-head-padding} - 8px)" 0;
+      display: inline-block;
+      flex: 1;
+    }
+    &-extra {
+      float: right;
+    }
+  }
+
+  &-body {
+    padding: @card-padding;
+    overflow: hidden;
+    .clearfix();
+
+    &-cover {
+      > * {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -126,7 +126,7 @@
 
         <li class="dib">
           <Icon name="deletecolumn" size="40" />
-          <div class="name">delete column</div>
+          <div class="name">deletecolumn</div>
         </li>
 
         <li class="dib">
@@ -381,7 +381,7 @@
 
         <li class="dib">
           <Icon name="icon-test" size="40" />
-          <div class="name">1:1</div>
+          <div class="name">icon-test</div>
         </li>
 
         <li class="dib">
@@ -481,7 +481,7 @@
 
         <li class="dib">
           <Icon name="pointmap" size="40" />
-          <div class="name">point map</div>
+          <div class="name">pointmap</div>
         </li>
 
         <li class="dib">
@@ -521,7 +521,7 @@
 
         <li class="dib">
           <Icon name="redenvelope" size="40" />
-          <div class="name">red envelope</div>
+          <div class="name">redenvelope</div>
         </li>
 
         <li class="dib">
@@ -531,7 +531,7 @@
 
         <li class="dib">
           <Icon name="filedone" size="40" />
-          <div class="name">file done</div>
+          <div class="name">filedone</div>
         </li>
 
         <li class="dib">
@@ -541,22 +541,17 @@
 
         <li class="dib">
           <Icon name="file-exception" size="40" />
-          <div class="name">file -exception</div>
+          <div class="name">file-exception</div>
         </li>
 
         <li class="dib">
           <Icon name="filesync" size="40" />
-          <div class="name">file sync</div>
+          <div class="name">filesync</div>
         </li>
 
         <li class="dib">
           <Icon name="filesearch" size="40" />
-          <div class="name">file search</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="file-pdf-fill" size="40" />
-          <div class="name">file-pdf-fill</div>
+          <div class="name">filesearch</div>
         </li>
 
         <li class="dib">
@@ -565,18 +560,8 @@
         </li>
 
         <li class="dib">
-          <Icon name="file-image-fill" size="40" />
-          <div class="name">file-image-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="fileprotect" size="40" />
-          <div class="name">file protect</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="diff-fill" size="40" />
-          <div class="name">diff-fill</div>
+          <div class="name">fileprotect</div>
         </li>
 
         <li class="dib">
@@ -585,18 +570,8 @@
         </li>
 
         <li class="dib">
-          <Icon name="file-copy-fill" size="40" />
-          <div class="name">file-copy-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="file-excel" size="40" />
           <div class="name">file-excel</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="snippets-fill" size="40" />
-          <div class="name">snippets-fill</div>
         </li>
 
         <li class="dib">
@@ -605,18 +580,8 @@
         </li>
 
         <li class="dib">
-          <Icon name="batchfolding-fill" size="40" />
-          <div class="name">batch folding-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="file-pdf" size="40" />
           <div class="name">file-pdf</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="reconciliation-fill" size="40" />
-          <div class="name">reconciliation-fill</div>
         </li>
 
         <li class="dib">
@@ -625,18 +590,8 @@
         </li>
 
         <li class="dib">
-          <Icon name="folder-add-fill" size="40" />
-          <div class="name">folder-add-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="file-markdown" size="40" />
           <div class="name">file-markdown</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="folder-fill" size="40" />
-          <div class="name">folder-fill</div>
         </li>
 
         <li class="dib">
@@ -645,18 +600,8 @@
         </li>
 
         <li class="dib">
-          <Icon name="folder-open-fill" size="40" />
-          <div class="name">folder-open-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="file-ppt" size="40" />
           <div class="name">file-ppt</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="database-fill" size="40" />
-          <div class="name">database-fill</div>
         </li>
 
         <li class="dib">
@@ -665,18 +610,8 @@
         </li>
 
         <li class="dib">
-          <Icon name="container-fill" size="40" />
-          <div class="name">container-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="file" size="40" />
           <div class="name">file</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="sever-fill" size="40" />
-          <div class="name">sever-fill</div>
         </li>
 
         <li class="dib">
@@ -685,28 +620,13 @@
         </li>
 
         <li class="dib">
-          <Icon name="calendar-check-fill" size="40" />
-          <div class="name">calendar-check-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="file-text" size="40" />
           <div class="name">file-text</div>
         </li>
 
         <li class="dib">
-          <Icon name="image-fill" size="40" />
-          <div class="name">image-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="file-copy" size="40" />
           <div class="name">file-copy</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="idcard-fill" size="40" />
-          <div class="name">id card-fill</div>
         </li>
 
         <li class="dib">
@@ -716,7 +636,7 @@
 
         <li class="dib">
           <Icon name="creditcard-fill" size="40" />
-          <div class="name">credit card-fill</div>
+          <div class="name">creditcard-fill</div>
         </li>
 
         <li class="dib">
@@ -741,7 +661,7 @@
 
         <li class="dib">
           <Icon name="Batchfolding" size="40" />
-          <div class="name">Batch folding</div>
+          <div class="name">Batchfolding</div>
         </li>
 
         <li class="dib">
@@ -751,7 +671,7 @@
 
         <li class="dib">
           <Icon name="securityscan" size="40" />
-          <div class="name">security scan</div>
+          <div class="name">securityscan</div>
         </li>
 
         <li class="dib">
@@ -761,7 +681,7 @@
 
         <li class="dib">
           <Icon name="propertysafety" size="40" />
-          <div class="name">property safety</div>
+          <div class="name">propertysafety</div>
         </li>
 
         <li class="dib">
@@ -771,7 +691,7 @@
 
         <li class="dib">
           <Icon name="safetycertificate" size="40" />
-          <div class="name">safety certificate</div>
+          <div class="name">safetycertificate</div>
         </li>
 
         <li class="dib">
@@ -786,7 +706,7 @@
 
         <li class="dib">
           <Icon name="moneycollect-fill" size="40" />
-          <div class="name">money collect-fill</div>
+          <div class="name">moneycollect-fill</div>
         </li>
 
         <li class="dib">
@@ -796,7 +716,7 @@
 
         <li class="dib">
           <Icon name="medicinebox-fill" size="40" />
-          <div class="name">medicine box-fill</div>
+          <div class="name">medicinebox-fill</div>
         </li>
 
         <li class="dib">
@@ -896,7 +816,7 @@
 
         <li class="dib">
           <Icon name="funnelplot-fill" size="40" />
-          <div class="name">funnel plot-fill</div>
+          <div class="name">funnelplot-fill</div>
         </li>
 
         <li class="dib">
@@ -921,7 +841,7 @@
 
         <li class="dib">
           <Icon name="funnelplot" size="40" />
-          <div class="name">funnel plot</div>
+          <div class="name">funnelplot</div>
         </li>
 
         <li class="dib">
@@ -991,7 +911,7 @@
 
         <li class="dib">
           <Icon name="moneycollect" size="40" />
-          <div class="name">money collect</div>
+          <div class="name">moneycollect</div>
         </li>
 
         <li class="dib">
@@ -1071,7 +991,7 @@
 
         <li class="dib">
           <Icon name="deploymentunit" size="40" />
-          <div class="name">deployment unit</div>
+          <div class="name">deploymentunit</div>
         </li>
 
         <li class="dib">
@@ -1081,7 +1001,7 @@
 
         <li class="dib">
           <Icon name="accountbook" size="40" />
-          <div class="name">account book</div>
+          <div class="name">accountbook</div>
         </li>
 
         <li class="dib">
@@ -1101,7 +1021,7 @@
 
         <li class="dib">
           <Icon name="carryout" size="40" />
-          <div class="name">carry out</div>
+          <div class="name">carryout</div>
         </li>
 
         <li class="dib">
@@ -1151,7 +1071,7 @@
 
         <li class="dib">
           <Icon name="boxplot" size="40" />
-          <div class="name">box plot</div>
+          <div class="name">boxplot</div>
         </li>
 
         <li class="dib">
@@ -1276,7 +1196,7 @@
 
         <li class="dib">
           <Icon name="boxplot-fill" size="40" />
-          <div class="name">box plot-fill</div>
+          <div class="name">boxplot-fill</div>
         </li>
 
         <li class="dib">
@@ -1316,7 +1236,7 @@
 
         <li class="dib">
           <Icon name="antdesign" size="40" />
-          <div class="name">ant design</div>
+          <div class="name">antdesign</div>
         </li>
 
         <li class="dib">
@@ -1346,7 +1266,7 @@
 
         <li class="dib">
           <Icon name="googleplus" size="40" />
-          <div class="name">google plus</div>
+          <div class="name">googleplus</div>
         </li>
 
         <li class="dib">
@@ -1401,7 +1321,7 @@
 
         <li class="dib">
           <Icon name="idcard" size="40" />
-          <div class="name">id card</div>
+          <div class="name">idcard</div>
         </li>
 
         <li class="dib">
@@ -1411,7 +1331,7 @@
 
         <li class="dib">
           <Icon name="creditcard" size="40" />
-          <div class="name">credit card</div>
+          <div class="name">creditcard</div>
         </li>
 
         <li class="dib">
@@ -1471,7 +1391,7 @@
 
         <li class="dib">
           <Icon name="heatmap" size="40" />
-          <div class="name">heat map</div>
+          <div class="name">heatmap</div>
         </li>
 
         <li class="dib">
@@ -1625,11 +1545,6 @@
         </li>
 
         <li class="dib">
-          <Icon name="Gitlab-fill" size="40" />
-          <div class="name">Gitlab-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="wrench" size="40" />
           <div class="name">wrench</div>
         </li>
@@ -1655,18 +1570,8 @@
         </li>
 
         <li class="dib">
-          <Icon name="android-fill" size="40" />
-          <div class="name">android-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="mr" size="40" />
           <div class="name">mr</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="apple-fill" size="40" />
-          <div class="name">apple-fill</div>
         </li>
 
         <li class="dib">
@@ -1675,18 +1580,8 @@
         </li>
 
         <li class="dib">
-          <Icon name="HTML-fill" size="40" />
-          <div class="name">HTML5-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="branches" size="40" />
           <div class="name">branches</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="windows-fill" size="40" />
-          <div class="name">windows-fill</div>
         </li>
 
         <li class="dib">
@@ -1715,13 +1610,8 @@
         </li>
 
         <li class="dib">
-          <Icon name="skype-fill" size="40" />
-          <div class="name">skype-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="verticalright" size="40" />
-          <div class="name">vertical right</div>
+          <div class="name">verticalright</div>
         </li>
 
         <li class="dib">
@@ -1731,12 +1621,7 @@
 
         <li class="dib">
           <Icon name="verticalleft" size="40" />
-          <div class="name">vertical left</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="yuque-fill" size="40" />
-          <div class="name">yuque-fill</div>
+          <div class="name">verticalleft</div>
         </li>
 
         <li class="dib">
@@ -1745,18 +1630,8 @@
         </li>
 
         <li class="dib">
-          <Icon name="Youtube-fill" size="40" />
-          <div class="name">Youtube-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="left" size="40" />
           <div class="name">left</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="yahoo-fill" size="40" />
-          <div class="name">yahoo-fill</div>
         </li>
 
         <li class="dib">
@@ -1765,18 +1640,8 @@
         </li>
 
         <li class="dib">
-          <Icon name="wechat-fill" size="40" />
-          <div class="name">wechat-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="down" size="40" />
           <div class="name">down</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="chrome-fill" size="40" />
-          <div class="name">chrome-fill</div>
         </li>
 
         <li class="dib">
@@ -1785,18 +1650,8 @@
         </li>
 
         <li class="dib">
-          <Icon name="alipay-circle-fill" size="40" />
-          <div class="name">alipay-circle-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="fullscreen-exit" size="40" />
           <div class="name">fullscreen-exit</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="aliwangwang-fill" size="40" />
-          <div class="name">aliwangwang-fill</div>
         </li>
 
         <li class="dib">
@@ -1805,28 +1660,13 @@
         </li>
 
         <li class="dib">
-          <Icon name="behance-circle-fill" size="40" />
-          <div class="name">behance-circle-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="doubleright" size="40" />
-          <div class="name">double right</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="amazon-circle-fill" size="40" />
-          <div class="name">amazon-circle-fill</div>
+          <div class="name">doubleright</div>
         </li>
 
         <li class="dib">
           <Icon name="arrowright" size="40" />
           <div class="name">arrowright</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="codepen-circle-fill" size="40" />
-          <div class="name">codepen-circle-fill</div>
         </li>
 
         <li class="dib">
@@ -1845,28 +1685,13 @@
         </li>
 
         <li class="dib">
-          <Icon name="dropbox-circle-fill" size="40" />
-          <div class="name">dropbox-circle-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="arrowdown" size="40" />
           <div class="name">arrowdown</div>
         </li>
 
         <li class="dib">
-          <Icon name="github-fill" size="40" />
-          <div class="name">github-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="upload" size="40" />
           <div class="name">upload</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="dribbble-circle-fill" size="40" />
-          <div class="name">dribbble-circle-fill</div>
         </li>
 
         <li class="dib">
@@ -1876,7 +1701,7 @@
 
         <li class="dib">
           <Icon name="googleplus-circle-f" size="40" />
-          <div class="name">google plus-circle-f</div>
+          <div class="name">googleplus-circle-f</div>
         </li>
 
         <li class="dib">
@@ -1885,18 +1710,8 @@
         </li>
 
         <li class="dib">
-          <Icon name="medium-circle-fill" size="40" />
-          <div class="name">medium-circle-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="vertical-align-middl" size="40" />
           <div class="name">vertical-align-middl</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="QQ-circle-fill" size="40" />
-          <div class="name">QQ-circle-fill</div>
         </li>
 
         <li class="dib">
@@ -1905,18 +1720,8 @@
         </li>
 
         <li class="dib">
-          <Icon name="IE-circle-fill" size="40" />
-          <div class="name">IE-circle-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="vertical-align-top" size="40" />
           <div class="name">vertical-align-top</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="google-circle-fill" size="40" />
-          <div class="name">google-circle-fill</div>
         </li>
 
         <li class="dib">
@@ -1925,18 +1730,8 @@
         </li>
 
         <li class="dib">
-          <Icon name="dingtalk-circle-fill" size="40" />
-          <div class="name">dingtalk-circle-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="sort-descending" size="40" />
           <div class="name">sort-descending</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="sketch-circle-fill" size="40" />
-          <div class="name">sketch-circle-fill</div>
         </li>
 
         <li class="dib">
@@ -1945,18 +1740,8 @@
         </li>
 
         <li class="dib">
-          <Icon name="slack-circle-fill" size="40" />
-          <div class="name">slack-circle-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="fall" size="40" />
           <div class="name">fall</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="twitter-circle-fill" size="40" />
-          <div class="name">twitter-circle-fill</div>
         </li>
 
         <li class="dib">
@@ -1965,18 +1750,8 @@
         </li>
 
         <li class="dib">
-          <Icon name="taobao-circle-fill" size="40" />
-          <div class="name">taobao-circle-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="stock" size="40" />
           <div class="name">stock</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="weibo-circle-fill" size="40" />
-          <div class="name">weibo-circle-fill</div>
         </li>
 
         <li class="dib">
@@ -1985,18 +1760,8 @@
         </li>
 
         <li class="dib">
-          <Icon name="zhihu-circle-fill" size="40" />
-          <div class="name">zhihu-circle-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="indent" size="40" />
           <div class="name">indent</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="reddit-circle-fill" size="40" />
-          <div class="name">reddit-circle-fill</div>
         </li>
 
         <li class="dib">
@@ -2005,23 +1770,13 @@
         </li>
 
         <li class="dib">
-          <Icon name="alipay-square-fill" size="40" />
-          <div class="name">alipay-square-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="menu" size="40" />
           <div class="name">menu</div>
         </li>
 
         <li class="dib">
-          <Icon name="dingtalk-square-fill" size="40" />
-          <div class="name">dingtalk-square-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="unorderedlist" size="40" />
-          <div class="name">unordered list</div>
+          <div class="name">unorderedlist</div>
         </li>
 
         <li class="dib">
@@ -2031,12 +1786,7 @@
 
         <li class="dib">
           <Icon name="orderedlist" size="40" />
-          <div class="name">ordered list</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="behance-square-fill" size="40" />
-          <div class="name">behance-square-fill</div>
+          <div class="name">orderedlist</div>
         </li>
 
         <li class="dib">
@@ -2045,18 +1795,8 @@
         </li>
 
         <li class="dib">
-          <Icon name="amazon-square-fill" size="40" />
-          <div class="name">amazon-square-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="align-center" size="40" />
           <div class="name">align-center</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="codepen-square-fill" size="40" />
-          <div class="name">codepen-square-fill</div>
         </li>
 
         <li class="dib">
@@ -2065,28 +1805,13 @@
         </li>
 
         <li class="dib">
-          <Icon name="dribbble-square-fill" size="40" />
-          <div class="name">dribbble-square-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="pic-center" size="40" />
           <div class="name">pic-center</div>
         </li>
 
         <li class="dib">
-          <Icon name="dropbox-square-fill" size="40" />
-          <div class="name">dropbox-square-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="pic-right" size="40" />
           <div class="name">pic-right</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="facebook-fill" size="40" />
-          <div class="name">facebook-fill</div>
         </li>
 
         <li class="dib">
@@ -2105,28 +1830,13 @@
         </li>
 
         <li class="dib">
-          <Icon name="google-square-fill" size="40" />
-          <div class="name">google-square-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="font-colors" size="40" />
           <div class="name">font-colors</div>
         </li>
 
         <li class="dib">
-          <Icon name="instagram-fill" size="40" />
-          <div class="name">instagram-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="exclaimination" size="40" />
           <div class="name">exclaimination</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="IE-square-fill" size="40" />
-          <div class="name">IE-square-fill</div>
         </li>
 
         <li class="dib">
@@ -2140,11 +1850,6 @@
         </li>
 
         <li class="dib">
-          <Icon name="medium-square-fill" size="40" />
-          <div class="name">medium-square-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="CI" size="40" />
           <div class="name">CI</div>
         </li>
@@ -2152,11 +1857,6 @@
         <li class="dib">
           <Icon name="infomation" size="40" />
           <div class="name">infomation</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="linkedin-fill" size="40" />
-          <div class="name">linkedin-fill</div>
         </li>
 
         <li class="dib">
@@ -2170,11 +1870,6 @@
         </li>
 
         <li class="dib">
-          <Icon name="QQ-square-fill" size="40" />
-          <div class="name">QQ-square-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="compass" size="40" />
           <div class="name">compass</div>
         </li>
@@ -2182,11 +1877,6 @@
         <li class="dib">
           <Icon name="strikethrough" size="40" />
           <div class="name">strikethrough</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="reddit-square-fill" size="40" />
-          <div class="name">reddit-square-fill</div>
         </li>
 
         <li class="dib">
@@ -2200,11 +1890,6 @@
         </li>
 
         <li class="dib">
-          <Icon name="twitter-square-fill" size="40" />
-          <div class="name">twitter-square-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="frown" size="40" />
           <div class="name">frown</div>
         </li>
@@ -2212,11 +1897,6 @@
         <li class="dib">
           <Icon name="number" size="40" />
           <div class="name">number</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="sketch-square-fill" size="40" />
-          <div class="name">sketch-square-fill</div>
         </li>
 
         <li class="dib">
@@ -2230,11 +1910,6 @@
         </li>
 
         <li class="dib">
-          <Icon name="slack-square-fill" size="40" />
-          <div class="name">slack-square-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="left-circle" size="40" />
           <div class="name">left-circle</div>
         </li>
@@ -2242,11 +1917,6 @@
         <li class="dib">
           <Icon name="code" size="40" />
           <div class="name">code</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="taobao-square-fill" size="40" />
-          <div class="name">taobao-square-fill</div>
         </li>
 
         <li class="dib">
@@ -2260,11 +1930,6 @@
         </li>
 
         <li class="dib">
-          <Icon name="weibo-square-fill" size="40" />
-          <div class="name">weibo-square-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="EURO" size="40" />
           <div class="name">EURO</div>
         </li>
@@ -2272,11 +1937,6 @@
         <li class="dib">
           <Icon name="check" size="40" />
           <div class="name">check</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="zhihu-square-fill" size="40" />
-          <div class="name">zhihu-square-fill</div>
         </li>
 
         <li class="dib">
@@ -2291,7 +1951,7 @@
 
         <li class="dib">
           <Icon name="zoomout" size="40" />
-          <div class="name">zoom out</div>
+          <div class="name">zoomout</div>
         </li>
 
         <li class="dib">
@@ -2335,11 +1995,6 @@
         </li>
 
         <li class="dib">
-          <Icon name="audio-fill" size="40" />
-          <div class="name">audio-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="play-circle" size="40" />
           <div class="name">play-circle</div>
         </li>
@@ -2366,7 +2021,7 @@
 
         <li class="dib">
           <Icon name="zoomin" size="40" />
-          <div class="name">zoom in</div>
+          <div class="name">zoomin</div>
         </li>
 
         <li class="dib">
@@ -2380,11 +2035,6 @@
         </li>
 
         <li class="dib">
-          <Icon name="robot-fill" size="40" />
-          <div class="name">robot-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="right-circle" size="40" />
           <div class="name">right-circle</div>
         </li>
@@ -2392,11 +2042,6 @@
         <li class="dib">
           <Icon name="rollback" size="40" />
           <div class="name">rollback</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="bug-fill" size="40" />
-          <div class="name">bug-fill</div>
         </li>
 
         <li class="dib">
@@ -2426,7 +2071,7 @@
 
         <li class="dib">
           <Icon name="audiostatic" size="40" />
-          <div class="name">audio static</div>
+          <div class="name">audiostatic</div>
         </li>
 
         <li class="dib">
@@ -2446,17 +2091,12 @@
 
         <li class="dib">
           <Icon name="timeout" size="40" />
-          <div class="name">time out</div>
+          <div class="name">timeout</div>
         </li>
 
         <li class="dib">
           <Icon name="crown" size="40" />
           <div class="name">crown</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="signal-fill" size="40" />
-          <div class="name">signal-fill</div>
         </li>
 
         <li class="dib">
@@ -2485,11 +2125,6 @@
         </li>
 
         <li class="dib">
-          <Icon name="shortcut-fill" size="40" />
-          <div class="name">shortcut-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="up-circle" size="40" />
           <div class="name">up-circle</div>
         </li>
@@ -2501,7 +2136,7 @@
 
         <li class="dib">
           <Icon name="videocameraadd" size="40" />
-          <div class="name">videocamera add</div>
+          <div class="name">videocameraadd</div>
         </li>
 
         <li class="dib">
@@ -2516,7 +2151,7 @@
 
         <li class="dib">
           <Icon name="switchuser" size="40" />
-          <div class="name">switch user</div>
+          <div class="name">switchuser</div>
         </li>
 
         <li class="dib">
@@ -2546,17 +2181,12 @@
 
         <li class="dib">
           <Icon name="appstoreadd" size="40" />
-          <div class="name">appstore add</div>
+          <div class="name">appstoreadd</div>
         </li>
 
         <li class="dib">
           <Icon name="undo" size="40" />
           <div class="name">undo</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="check-circle-fill" size="40" />
-          <div class="name">check-circle-fill</div>
         </li>
 
         <li class="dib">
@@ -2570,11 +2200,6 @@
         </li>
 
         <li class="dib">
-          <Icon name="left-circle-fill" size="40" />
-          <div class="name">left-circle-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="backward" size="40" />
           <div class="name">backward</div>
         </li>
@@ -2585,23 +2210,13 @@
         </li>
 
         <li class="dib">
-          <Icon name="down-circle-fill" size="40" />
-          <div class="name">down-circle-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="caret-up" size="40" />
           <div class="name">caret-up</div>
         </li>
 
         <li class="dib">
           <Icon name="reloadtime" size="40" />
-          <div class="name">reload time</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="minus-circle-fill" size="40" />
-          <div class="name">minus-circle-fill</div>
+          <div class="name">reloadtime</div>
         </li>
 
         <li class="dib">
@@ -2615,11 +2230,6 @@
         </li>
 
         <li class="dib">
-          <Icon name="close-circle-fill" size="40" />
-          <div class="name">close-circle-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="caret-left" size="40" />
           <div class="name">caret-left</div>
         </li>
@@ -2630,23 +2240,13 @@
         </li>
 
         <li class="dib">
-          <Icon name="info-circle-fill" size="40" />
-          <div class="name">info-circle-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="fast-backward" size="40" />
           <div class="name">fast-backward</div>
         </li>
 
         <li class="dib">
           <Icon name="issuesclose" size="40" />
-          <div class="name">issues close</div>
-        </li>
-
-        <li class="dib">
-          <Icon name="up-circle-fill" size="40" />
-          <div class="name">up-circle-fill</div>
+          <div class="name">issuesclose</div>
         </li>
 
         <li class="dib">
@@ -2660,11 +2260,6 @@
         </li>
 
         <li class="dib">
-          <Icon name="right-circle-fill" size="40" />
-          <div class="name">right-circle-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="fast-forward" size="40" />
           <div class="name">fast-forward</div>
         </li>
@@ -2675,14 +2270,10 @@
         </li>
 
         <li class="dib">
-          <Icon name="plus-circle-fill" size="40" />
-          <div class="name">plus-circle-fill</div>
-        </li>
-
-        <li class="dib">
           <Icon name="search" size="40" />
           <div class="name">search</div>
         </li>
+
         <li class="dib">
           <Icon name="question-circle-fill" size="40" />
           <div class="name">question-circle-fill</div>
@@ -2696,7 +2287,7 @@
           <div class="name">frown-fill</div>
         </li>
         <li class="dib">
-          <Icon name="copyright-circle-fil" size="40" />
+          <Icon name="copyright-circle-fill" size="40" />
           <div class="name">copyright-circle-fill</div>
         </li>
         <li class="dib">
@@ -2722,7 +2313,7 @@
 
         <li class="dib">
           <Icon name="eyeclose-fill" size="40" />
-          <div class="name">eye close-fill</div>
+          <div class="name">eyeclose-fill</div>
         </li>
         <li class="dib">
           <Icon name="play-circle-fill" size="40" />
@@ -2750,8 +2341,8 @@
           <div class="name">time-circle-fill</div>
         </li>
         <li class="dib">
-          <Icon name="trademark-circle-fil" size="40" />
-          <div class="name">trademark-circle-fil</div>
+          <Icon name="trademark-circle-fill" size="40" />
+          <div class="name">trademark-circle-fill</div>
         </li>
         <li class="dib">
           <Icon name="YUAN-circle-fill" size="40" />
@@ -2789,11 +2380,11 @@
 
         <li class="dib">
           <Icon name="formatpainter-fill" size="40" />
-          <div class="name">format painter-fill</div>
+          <div class="name">formatpainter-fill</div>
         </li>
         <li class="dib">
           <Icon name="codelibrary-fill" size="40" />
-          <div class="name">code library-fill</div>
+          <div class="name">codelibrary-fill</div>
         </li>
 
         <li class="dib">
@@ -2818,11 +2409,11 @@
         </li>
         <li class="dib">
           <Icon name="accountbook-fill" size="40" />
-          <div class="name">account book-fill</div>
+          <div class="name">accountbook-fill</div>
         </li>
         <li class="dib">
           <Icon name="carryout-fill" size="40" />
-          <div class="name">carry out-fill</div>
+          <div class="name">carryout-fill</div>
         </li>
         <li class="dib">
           <Icon name="calendar-fill" size="40" />
@@ -2866,8 +2457,8 @@
           <div class="name">appstore-fill</div>
         </li>
         <li class="dib">
-          <Icon name="piechart-circle-fil" size="40" />
-          <div class="name">piechart-circle-fil</div>
+          <Icon name="piechart-circle-fill" size="40" />
+          <div class="name">piechart-circle-fill</div>
         </li>
 
         <li class="dib">
@@ -2899,8 +2490,8 @@
           <div class="name">securityscan-fill</div>
         </li>
         <li class="dib">
-          <Icon name="file-exclamation-fil" size="40" />
-          <div class="name">file-exclamation-fil</div>
+          <Icon name="file-exclamation-fill" size="40" />
+          <div class="name">file-exclamation-fill</div>
         </li>
         <li class="dib">
           <Icon name="file-add-fill" size="40" />
@@ -2946,6 +2537,342 @@
           <Icon name="file-zip-fill" size="40" />
           <div class="name">file-zip-fill</div>
         </li>
+
+        <li class="dib">
+          <Icon name="file-pdf-fill" size="40" />
+          <div class="name">file-pdf-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="file-image-fill" size="40" />
+          <div class="name">file-image-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="diff-fill" size="40" />
+          <div class="name">diff-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="file-copy-fill" size="40" />
+          <div class="name">file-copy-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="snippets-fill" size="40" />
+          <div class="name">snippets-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="batchfolding-fill" size="40" />
+          <div class="name">batch folding-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="reconciliation-fill" size="40" />
+          <div class="name">reconciliation-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="folder-add-fill" size="40" />
+          <div class="name">folder-add-fill</div>
+        </li>
+
+        <li class="dib">
+          <Icon name="folder-fill" size="40" />
+          <div class="name">folder-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="folder-open-fill" size="40" />
+          <div class="name">folder-open-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="database-fill" size="40" />
+          <div class="name">database-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="container-fill" size="40" />
+          <div class="name">container-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="sever-fill" size="40" />
+          <div class="name">sever-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="calendar-check-fill" size="40" />
+          <div class="name">calendar-check-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="image-fill" size="40" />
+          <div class="name">image-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="idcard-fill" size="40" />
+          <div class="name">id card-fill</div>
+        </li>
+
+        <li class="dib">
+          <Icon name="Gitlab-fill" size="40" />
+          <div class="name">Gitlab-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="android-fill" size="40" />
+          <div class="name">android-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="apple-fill" size="40" />
+          <div class="name">apple-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="HTML-fill" size="40" />
+          <div class="name">HTML5-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="windows-fill" size="40" />
+          <div class="name">windows-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="skype-fill" size="40" />
+          <div class="name">skype-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="yuque-fill" size="40" />
+          <div class="name">yuque-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="Youtube-fill" size="40" />
+          <div class="name">Youtube-fill</div>
+        </li>
+
+        <li class="dib">
+          <Icon name="yahoo-fill" size="40" />
+          <div class="name">yahoo-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="wechat-fill" size="40" />
+          <div class="name">wechat-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="chrome-fill" size="40" />
+          <div class="name">chrome-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="alipay-circle-fill" size="40" />
+          <div class="name">alipay-circle-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="aliwangwang-fill" size="40" />
+          <div class="name">aliwangwang-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="behance-circle-fill" size="40" />
+          <div class="name">behance-circle-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="amazon-circle-fill" size="40" />
+          <div class="name">amazon-circle-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="codepen-circle-fill" size="40" />
+          <div class="name">codepen-circle-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="dropbox-circle-fill" size="40" />
+          <div class="name">dropbox-circle-fill</div>
+        </li>
+
+        <li class="dib">
+          <Icon name="github-fill" size="40" />
+          <div class="name">github-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="dribbble-circle-fill" size="40" />
+          <div class="name">dribbble-circle-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="medium-circle-fill" size="40" />
+          <div class="name">medium-circle-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="QQ-circle-fill" size="40" />
+          <div class="name">QQ-circle-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="IE-circle-fill" size="40" />
+          <div class="name">IE-circle-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="google-circle-fill" size="40" />
+          <div class="name">google-circle-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="dingtalk-circle-fill" size="40" />
+          <div class="name">dingtalk-circle-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="sketch-circle-fill" size="40" />
+          <div class="name">sketch-circle-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="slack-circle-fill" size="40" />
+          <div class="name">slack-circle-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="twitter-circle-fill" size="40" />
+          <div class="name">twitter-circle-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="taobao-circle-fill" size="40" />
+          <div class="name">taobao-circle-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="weibo-circle-fill" size="40" />
+          <div class="name">weibo-circle-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="zhihu-circle-fill" size="40" />
+          <div class="name">zhihu-circle-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="reddit-circle-fill" size="40" />
+          <div class="name">reddit-circle-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="alipay-square-fill" size="40" />
+          <div class="name">alipay-square-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="dingtalk-square-fill" size="40" />
+          <div class="name">dingtalk-square-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="behance-square-fill" size="40" />
+          <div class="name">behance-square-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="amazon-square-fill" size="40" />
+          <div class="name">amazon-square-fill</div>
+        </li>
+
+        <li class="dib">
+          <Icon name="codepen-square-fill" size="40" />
+          <div class="name">codepen-square-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="dribbble-square-fill" size="40" />
+          <div class="name">dribbble-square-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="dropbox-square-fill" size="40" />
+          <div class="name">dropbox-square-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="facebook-fill" size="40" />
+          <div class="name">facebook-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="google-square-fill" size="40" />
+          <div class="name">google-square-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="instagram-fill" size="40" />
+          <div class="name">instagram-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="IE-square-fill" size="40" />
+          <div class="name">IE-square-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="medium-square-fill" size="40" />
+          <div class="name">medium-square-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="linkedin-fill" size="40" />
+          <div class="name">linkedin-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="QQ-square-fill" size="40" />
+          <div class="name">QQ-square-fill</div>
+        </li>
+
+        <li class="dib">
+          <Icon name="reddit-square-fill" size="40" />
+          <div class="name">reddit-square-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="twitter-square-fill" size="40" />
+          <div class="name">twitter-square-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="sketch-square-fill" size="40" />
+          <div class="name">sketch-square-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="slack-square-fill" size="40" />
+          <div class="name">slack-square-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="taobao-square-fill" size="40" />
+          <div class="name">taobao-square-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="weibo-square-fill" size="40" />
+          <div class="name">weibo-square-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="zhihu-square-fill" size="40" />
+          <div class="name">zhihu-square-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="audio-fill" size="40" />
+          <div class="name">audio-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="robot-fill" size="40" />
+          <div class="name">robot-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="bug-fill" size="40" />
+          <div class="name">bug-fill</div>
+        </li>
+
+        <li class="dib">
+          <Icon name="signal-fill" size="40" />
+          <div class="name">signal-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="shortcut-fill" size="40" />
+          <div class="name">shortcut-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="check-circle-fill" size="40" />
+          <div class="name">check-circle-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="left-circle-fill" size="40" />
+          <div class="name">left-circle-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="down-circle-fill" size="40" />
+          <div class="name">down-circle-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="minus-circle-fill" size="40" />
+          <div class="name">minus-circle-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="close-circle-fill" size="40" />
+          <div class="name">close-circle-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="info-circle-fill" size="40" />
+          <div class="name">info-circle-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="up-circle-fill" size="40" />
+          <div class="name">up-circle-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="right-circle-fill" size="40" />
+          <div class="name">right-circle-fill</div>
+        </li>
+        <li class="dib">
+          <Icon name="plus-circle-fill" size="40" />
+          <div class="name">plus-circle-fill</div>
+        </li>
       </ul>
       <h2>API</h2>
     </section>
@@ -2970,6 +2897,8 @@ export default {
           nameNode = e.target.nextElementSibling;
         } else if (e.target.className === "dib") {
           nameNode = e.target.lastElementChild;
+        } else {
+          return;
         }
         copyText = `<Icon name="${nameNode.innerText}" />`;
       }

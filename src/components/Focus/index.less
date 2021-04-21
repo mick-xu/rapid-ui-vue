@@ -1,0 +1,31 @@
+@prefix: focus;
+
+.@{prefix} {
+  position: relative;
+  height: auto;
+
+  &-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 32px;
+    height: 32px;
+    line-height: 0.9em;
+    background: rgba(0, 0, 0, 0.1);
+    color: #fff;
+    cursor: pointer;
+    font-size: 30px;
+  }
+  &-prev {
+    left: 0;
+  }
+  &-next {
+    right: 0;
+  }
+
+  &-item {
+    position: absolute;
+    width: 100%;
+  }
+}
