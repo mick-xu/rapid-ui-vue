@@ -26,9 +26,7 @@ export default {
   setup(props) {
     const { gutter } = inject("gutter", { gutter: { value: 0 } });
     const styles = computed(() => {
-      const wrapPadding = gutter.value
-        ? { paddingLeft: `${gutter.value / 2}px`, paddingRight: `${gutter.value / 2}px` }
-        : {};
+      const wrapPadding = gutter.value ? { padding: `${gutter.value / 2}px` } : {};
       return wrapPadding;
     });
     const classes = computed(() => {

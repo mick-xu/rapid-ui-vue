@@ -41,14 +41,21 @@ export default {
     });
     const gutter = computed(() => props.gutter);
     provide("gutter", { gutter });
+    let wrapMargin;
     const styles = computed(() => {
-      const wrapMargin =
-        props.gutter > 0
-          ? {
-              marginLeft: `-${props.gutter / 2}px`,
-              marginRight: `-${props.gutter / 2}px`,
-            }
-          : {};
+      if (typeof props.gutter === "number") {
+        if (props.gutter <= 0) {
+          wrapMargin = {};
+        } else {
+          wrapMargin = {
+            margin: `-${props.gutter / 2}px`,
+          };
+        }
+      } else if (Array.isArray(props.gutter) && props.gutter.length === 2) {
+        wrapMargin = {
+          margin: `${props.gutter[0] / 2}px ${props.gutter[1] / 2}px`,
+        };
+      }
       return wrapMargin;
     });
     return {
