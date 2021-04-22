@@ -5,6 +5,7 @@ import Container from "./components/Container";
 import Focus, { FocusItem } from "./components/Focus";
 import { Col, Row } from "./components/Grid";
 import Icon from "./components/Icon";
+import Input from "./components/Input";
 import Layout, { Content, Footer, Header, Sider } from "./components/Layout";
 import Menu, { MenuGroup, MenuItem, SubMenu } from "./components/Menu";
 import Space from "./components/Space";
@@ -22,6 +23,7 @@ const components = {
   Footer,
   Header,
   Icon,
+  Input,
   Layout,
   Menu,
   MenuGroup,

@@ -1,0 +1,29 @@
+@import "../../styles/themes/default.less";
+@import "../../styles/mixins/index.less";
+
+@input-border-color: @border-color-base;
+@input-outline-offset: 0 0;
+@input-padding-vertical: (@font-size-base / 2);
+@input-padding-horizontal: (@font-size-base / 2);
+
+.input-wrapper {
+  position: relative;
+}
+
+.@{prefix}-input {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  border: @border-width-base @border-style-base @input-border-color;
+  padding: @input-padding-vertical @input-padding-horizontal;
+
+  &:hover {
+    border-color: @input-border-color;
+  }
+  &:focus {
+    border-color: @input-border-color;
+    outline: none;
+    box-shadow: @input-outline-offset @outline-blur-size @outline-width
+      fade(@outline-color, @outline-fade);
+  }
+}
