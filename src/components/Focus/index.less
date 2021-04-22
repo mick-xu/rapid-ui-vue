@@ -1,8 +1,11 @@
+@import "../../styles/themes/default.less";
 @prefix: focus;
 
 .@{prefix} {
   position: relative;
-  height: auto;
+  height: 100%;
+  box-sizing: border-box;
+  line-height: @line-height-base;
 
   &-control {
     position: absolute;

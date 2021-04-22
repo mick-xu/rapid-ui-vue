@@ -1,6 +1,5 @@
 <template>
-  <div :class="classes" :style="styles">
-    <!-- <component :is="item" :key="index" v-for="(item, index) in items" /> -->
+  <div :class="classes" :style="styles" ref="focus">
     <slot />
     <div class="focus-control focus-prev" @click="prev">‹</div>
     <div class="focus-control focus-next" @click="next">›</div>
@@ -8,16 +7,30 @@
 </template>
 
 <script>
-import { computed, onMounted, reactive, ref, provide, onUnmounted } from "vue";
+import {
+  computed,
+  onMounted,
+  reactive,
+  ref,
+  provide,
+  onUnmounted,
+  nextTick,
+  onUpdated,
+} from "vue";
 export default {
   name: "Focus",
   props: {
     autoPlay: { type: Boolean, default: true },
+    interval: { type: Number, default: 3000 },
   },
   setup(props) {
     const classes = computed(() => {
       return ["focus"];
     });
+
+    const styles = reactive({ height: "0" });
+
+    const focus = ref();
 
     const data = reactive({
       activeUid: 0,
@@ -25,17 +38,28 @@ export default {
     });
 
     const items = ref([]);
+
+    const initFocus = () => {
+      data.activeUid = items.value[0];
+    };
+
     const addItem = (item) => {
       items.value.push(item);
     };
 
-    const play = () => {
-      data.timer = setInterval(() => {
-        next();
-      }, 3000);
+    const startTimer = () => {
+      if (props.autoPlay && props.interval > 0) {
+        data.timer = setInterval(() => next(), props.interval);
+      }
     };
 
-    const styles = reactive({ height: "100px" });
+    const stopTimer = () => {
+      if (data.timer) {
+        clearInterval(data.timer);
+        data.timer = undefined;
+      }
+    };
+
     const prev = () => {
       let index = items.value.indexOf(data.activeUid);
       index = index > 0 ? index : items.value.length;
@@ -48,12 +72,17 @@ export default {
     };
 
     onMounted(() => {
-      data.activeUid = items.value[0];
-      props.autoPlay && play();
+      initFocus();
+      startTimer();
+      nextTick(() => {
+        styles.height = `${focus.value.children[0].clientHeight}px`;
+      });
     });
 
+    onUpdated(() => {});
+
     onUnmounted(() => {
-      clearInterval(data.timer);
+      stopTimer();
     });
 
     provide("FocusScope", {
@@ -61,7 +90,7 @@ export default {
       addItem,
     });
 
-    return { classes, items, styles, prev, next };
+    return { classes, items, focus, styles, prev, next };
   },
 };
 </script>
