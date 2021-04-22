@@ -21,7 +21,7 @@ export default {
   setup() {
     const code = ref();
     onMounted(() => {
-      hljs.configure({ useBR: true });
+      hljs.configure({});
       hljs.highlightElement(code.value);
     });
     return { code };
@@ -35,7 +35,7 @@ pre {
     padding: 12px 16px;
     border-radius: 3px;
     font-family: Lucida Console, Consolas;
-    color: rgba(0,0,0,.75);
+    color: rgba(0, 0, 0, 0.75);
     line-height: 18px;
   }
 }
