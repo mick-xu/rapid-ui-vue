@@ -27,5 +27,16 @@
   &-item {
     position: absolute;
     width: 100%;
+    overflow: hidden;
+    display: none;
+    transition: all 0.3s;
+
+    > * {
+      height: inherit;
+    }
+  }
+  .active {
+    display: block;
+    transition: all 0.3s;
   }
 }
