@@ -1,8 +1,22 @@
 <template>
   <div :class="classes" :style="styles" ref="focus">
     <slot />
-    <div class="focus-control focus-prev" @click="prev">‹</div>
-    <div class="focus-control focus-next" @click="next">›</div>
+    <div
+      class="focus-control focus-prev"
+      @click="prevHandler"
+      @mouseenter="handleEnter"
+      @mouseleave="handleLeave"
+    >
+      ‹
+    </div>
+    <div
+      class="focus-control focus-next"
+      @click="nextHandler"
+      @mouseenter="handleEnter"
+      @mouseleave="handleLeave"
+    >
+      ›
+    </div>
   </div>
 </template>
 
@@ -49,7 +63,7 @@ export default {
 
     const startTimer = () => {
       if (props.autoPlay && props.interval > 0) {
-        data.timer = setInterval(() => next(), props.interval);
+        data.timer = setInterval(() => nextHandler(), props.interval);
       }
     };
 
@@ -60,15 +74,22 @@ export default {
       }
     };
 
-    const prev = () => {
+    const prevHandler = () => {
       let index = items.value.indexOf(data.activeUid);
       index = index > 0 ? index : items.value.length;
       data.activeUid = items.value[--index];
     };
-    const next = () => {
+    const nextHandler = () => {
       let index = items.value.indexOf(data.activeUid);
       index = index < items.value.length - 1 ? index : -1;
       data.activeUid = items.value[++index];
+    };
+
+    const handleEnter = () => {
+      stopTimer();
+    };
+    const handleLeave = () => {
+      startTimer();
     };
 
     onMounted(() => {
@@ -88,9 +109,20 @@ export default {
     provide("FocusScope", {
       data,
       addItem,
+      startTimer,
+      stopTimer,
     });
 
-    return { classes, items, focus, styles, prev, next };
+    return {
+      classes,
+      items,
+      focus,
+      styles,
+      prevHandler,
+      nextHandler,
+      handleEnter,
+      handleLeave,
+    };
   },
 };
 </script>
