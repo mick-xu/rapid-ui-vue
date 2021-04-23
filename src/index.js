@@ -9,6 +9,7 @@ import Icon from "./Icon";
 import Input from "./Input";
 import Layout, { Content, Footer, Header, Sider } from "./Layout";
 import Menu, { MenuGroup, MenuItem, SubMenu } from "./Menu";
+import Pagination from "./Pagination";
 import Space from "./Space";
 import "./styles/index.less";
 
@@ -31,6 +32,7 @@ const components = {
   Menu,
   MenuGroup,
   MenuItem,
+  Pagination,
   Row,
   Sider,
   Space,
