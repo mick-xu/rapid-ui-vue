@@ -3,6 +3,7 @@ import Button from "./Button";
 import Card from "./Card";
 import Container from "./Container";
 import Focus, { FocusItem } from "./Focus";
+import Form, { FormItem } from "./Form";
 import { Col, Row } from "./Grid";
 import Icon from "./Icon";
 import Input from "./Input";
@@ -21,6 +22,8 @@ const components = {
   Focus,
   FocusItem,
   Footer,
+  Form,
+  FormItem,
   Header,
   Icon,
   Input,
