@@ -123,6 +123,20 @@ export default [
           },
         ],
       },
+      {
+        path: "form",
+        name: "form",
+        title: "表单输入",
+        component: Components,
+        children: [
+          {
+            path: "input",
+            name: "input",
+            title: "Input 输入框",
+            component: () => import("@/views/components/InputPage"),
+          },
+        ],
+      },
     ],
   },
 ];

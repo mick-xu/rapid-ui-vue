@@ -29,7 +29,7 @@
     "lib": "vue-cli-service build --target lib --name rapid-ui --dest lib src/index.js"
   },
   "peerDependencies": {
-    "vue": "^3.0.10"
+    "vue": "^3.0.11"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -51,7 +51,7 @@
     "less": "^4.1.1",
     "less-loader": "^5.0.0",
     "lint-staged": "^9.5.0",
-    "vue": "^3.0.10",
+    "vue": "^3.0.11",
     "vue-router": "^4.0.5",
     "vuex": "^4.0.0-0"
   },

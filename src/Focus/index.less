@@ -1,8 +1,18 @@
+@import "../styles/themes/default.less";
 @prefix: focus;
 
 .@{prefix} {
   position: relative;
-  height: auto;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  line-height: @line-height-base;
+
+  &:hover {
+    .@{prefix}-control {
+      opacity: 1 !important;
+    }
+  }
 
   &-control {
     position: absolute;
@@ -16,7 +26,9 @@
     color: #fff;
     cursor: pointer;
     font-size: 30px;
+    opacity: 0;
   }
+
   &-prev {
     left: 0;
   }
@@ -26,6 +38,17 @@
 
   &-item {
     position: absolute;
-    width: 100%;
+    width: inherit;
+    overflow: hidden;
+    display: none;
+    transition: all 0.3s;
+
+    > * {
+      width: inherit;
+    }
+  }
+  .active {
+    display: block;
+    transition: all 0.3s;
   }
 }

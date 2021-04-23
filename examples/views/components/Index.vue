@@ -15,7 +15,7 @@
 
 <script>
 import { useRouter } from "vue-router";
-import routes from "../../router/routes";
+import routes from "@/router/routes";
 export default {
   setup() {
     const router = useRouter();
