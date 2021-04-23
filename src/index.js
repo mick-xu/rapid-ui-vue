@@ -1,14 +1,14 @@
-import Alert from "./components/Alert";
-import Button from "./components/Button";
-import Card from "./components/Card";
-import Container from "./components/Container";
-import Focus, { FocusItem } from "./components/Focus";
-import { Col, Row } from "./components/Grid";
-import Icon from "./components/Icon";
-import Input from "./components/Input";
-import Layout, { Content, Footer, Header, Sider } from "./components/Layout";
-import Menu, { MenuGroup, MenuItem, SubMenu } from "./components/Menu";
-import Space from "./components/Space";
+import Alert from "./Alert";
+import Button from "./Button";
+import Card from "./Card";
+import Container from "./Container";
+import Focus, { FocusItem } from "./Focus";
+import { Col, Row } from "./Grid";
+import Icon from "./Icon";
+import Input from "./Input";
+import Layout, { Content, Footer, Header, Sider } from "./Layout";
+import Menu, { MenuGroup, MenuItem, SubMenu } from "./Menu";
+import Space from "./Space";
 import "./styles/index.less";
 
 const components = {
