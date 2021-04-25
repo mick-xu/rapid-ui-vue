@@ -115,6 +115,12 @@ export default [
             title: "Alert 警告",
             component: () => import("@/views/components/Alert"),
           },
+          {
+            path: "modal",
+            name: "modal",
+            title: "Modal 对话框",
+            component: () => import("@/views/components/Modal"),
+          },
         ],
       },
       {
