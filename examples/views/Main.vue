@@ -14,9 +14,7 @@
       </Container>
     </Header>
     <Container>
-      <Layout>
-        <router-view />
-      </Layout>
+      <router-view />
     </Container>
     <Footer></Footer>
   </Layout>

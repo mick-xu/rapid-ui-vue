@@ -1,16 +1,18 @@
 <template>
-  <Sider style="background: #f9f9f9;border-right: solid 1px #f0f0f0">
-    <keep-alive>
-      <Menu mode="vertical" @onClick="handleClick">
-        <MenuGroup :title="group.title" v-for="group in menus" :key="group.name">
-          <MenuItem :name="menu.name" v-for="menu in group.children" :key="menu.name">
-            {{ menu.title }}
-          </MenuItem>
-        </MenuGroup>
-      </Menu>
-    </keep-alive>
-  </Sider>
-  <Content><router-view /></Content>
+  <Layout>
+    <Sider style="background: #f9f9f9; border-right: solid 1px #f0f0f0">
+      <keep-alive>
+        <Menu mode="vertical" @onClick="handleClick">
+          <MenuGroup :title="group.title" v-for="group in menus" :key="group.name">
+            <MenuItem :name="menu.name" v-for="menu in group.children" :key="menu.name">
+              {{ menu.title }}
+            </MenuItem>
+          </MenuGroup>
+        </Menu>
+      </keep-alive>
+    </Sider>
+    <Content><router-view /></Content>
+  </Layout>
 </template>
 
 <script>
