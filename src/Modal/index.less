@@ -14,9 +14,7 @@
 @modal-header-border-color-split: @border-color-split;
 
 .@{prefix} {
-  position: relative;
   max-width: 100vw;
-  height: 100vh;
 
   .overlay {
     .overlay();
@@ -28,6 +26,7 @@
     top: 50%;
     transform: translate(-50%, -30%);
     background: @modal-content-bg;
+    z-index: 999;
   }
   &-close {
     position: absolute;

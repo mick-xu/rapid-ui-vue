@@ -1,8 +1,9 @@
 <template>
   <teleport to="body">
-    <div class="modal">
-      <div class="overlay" v-show="visible">
-        <div class="modal-content" :style="styles">
+    <transition>
+      <div class="modal">
+        <div class="overlay" v-show="mask && visible"></div>
+        <div class="modal-content" :style="styles" v-show="visible">
           <div class="modal-header">
             <div class="modal-header-title">{{ title }}</div>
           </div>
@@ -17,7 +18,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </transition>
   </teleport>
 </template>
 
