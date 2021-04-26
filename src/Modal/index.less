@@ -12,6 +12,8 @@
 @modal-header-border-width: @border-width-base;
 @modal-header-border-style: @border-style-base;
 @modal-header-border-color-split: @border-color-split;
+@modal-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08),
+0 9px 28px 8px rgba(0, 0, 0, 0.05);
 
 .@{prefix} {
   max-width: 100vw;
@@ -27,7 +29,9 @@
     transform: translate(-50%, -30%);
     background: @modal-content-bg;
     z-index: 999;
+    box-shadow: @modal-shadow;
   }
+  
   &-close {
     position: absolute;
     top: 0;
