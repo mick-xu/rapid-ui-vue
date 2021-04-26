@@ -23,6 +23,9 @@ export default {
       focusScope.startTimer();
     };
     onMounted(() => {
+      if (!focusScope.data.itemHeight) {
+        focusScope.data.itemHeight = instance.vnode.el.clientHeight;
+      }
       focusScope.addItem(instance.uid);
     });
     return { classes, handleEnter, handleLeave };

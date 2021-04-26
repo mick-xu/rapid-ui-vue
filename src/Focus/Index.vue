@@ -1,5 +1,5 @@
 <template>
-  <div :class="classes" :style="styles" ref="focus">
+  <div :class="classes" :style="styles">
     <slot />
     <div
       class="focus-control focus-prev"
@@ -70,11 +70,10 @@ export default {
 
     const styles = reactive({ height: "0" });
 
-    const focus = ref();
-
     const data = reactive({
       activeUid: 0,
       timer: undefined,
+      itemHeight: 0,
     });
 
     const items = ref([]);
@@ -122,7 +121,7 @@ export default {
       initFocus();
       startTimer();
       nextTick(() => {
-        styles.height = `${focus.value.children[0].clientHeight}px`;
+        styles.height = `${data.itemHeight}px`;
       });
     });
 
@@ -142,7 +141,6 @@ export default {
     return {
       classes,
       items,
-      focus,
       styles,
       prevHandler,
       nextHandler,
