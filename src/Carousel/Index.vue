@@ -3,8 +3,22 @@
     <ul :style="ulStyles">
       <slot />
     </ul>
-    <div class="carousel-control carousel-prev" @click="prevHandler">‹</div>
-    <div class="carousel-control carousel-next" @click="nextHandler">›</div>
+    <div
+      class="carousel-control carousel-prev"
+      @click="prevHandler"
+      @mouseenter="handleEnter"
+      @mouseleave="handleLeave"
+    >
+      ‹
+    </div>
+    <div
+      class="carousel-control carousel-next"
+      @click="nextHandler"
+      @mouseenter="handleEnter"
+      @mouseleave="handleLeave"
+    >
+      ›
+    </div>
   </div>
 </template>
 
@@ -69,7 +83,26 @@ export default {
       const item = items.value[data.nextIndex--];
       item.left -= data.itemSize.width * items.value.length;
     };
+    const startTimer = () => {
+      if (props.autoplay && props.interval > 0) {
+        data.timer = setInterval(() => prevHandler(), props.interval);
+      }
+    };
+
+    const stopTimer = () => {
+      if (data.timer) {
+        clearInterval(data.timer);
+        data.timer = undefined;
+      }
+    };
+    const handleEnter = () => {
+      stopTimer();
+    };
+    const handleLeave = () => {
+      startTimer();
+    };
     onMounted(() => {
+      startTimer();
       nextTick(() => {
         const width = instance.vnode.el.clientWidth;
         data.itemSize.width = Number(((width * 1.0) / props.displayCount).toFixed(3));
@@ -83,8 +116,10 @@ export default {
       data,
       items,
       addItem,
+      startTimer,
+      stopTimer,
     });
-    return { classes, ulStyles, prevHandler, nextHandler, items };
+    return { classes, ulStyles, prevHandler, nextHandler, handleEnter, handleLeave };
   },
 };
 </script>

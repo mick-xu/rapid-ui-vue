@@ -1,5 +1,5 @@
 <template>
-  <li class="carousel-item" :style="styles"><slot /></li>
+  <li class="carousel-item" :style="styles" @mouseenter="handleEnter" @mouseleave="handleLeave"><slot /></li>
 </template>
 
 <script>
@@ -17,13 +17,19 @@ export default {
         transform: `translateX(${carouselScope.data.translate}px)`,
       };
     });
+    const handleEnter = () => {
+      carouselScope.stopTimer();
+    };
+    const handleLeave = () => {
+      carouselScope.startTimer();
+    };
     onMounted(() => {
       if (!carouselScope.data.itemSize.height) {
         carouselScope.data.itemSize.height = instance.vnode.el.clientHeight;
       }
       carouselScope.addItem({ uid: instance.uid, left: 0 });
     });
-    return { styles };
+    return { styles, handleEnter, handleLeave };
   },
 };
 </script>
