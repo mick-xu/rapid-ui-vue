@@ -42,7 +42,7 @@ export default {
     });
     const ulStyles = computed(() => {
       return {
-        width: `${Number(data.itemSize.width) * items.value.length}px`,
+        // width: `${Number(data.itemSize.width) * items.value.length}px`,
         height: `${data.itemSize.height}px`,
       };
     });
