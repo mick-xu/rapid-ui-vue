@@ -1,6 +1,7 @@
 import Alert from "./Alert";
 import Button from "./Button";
 import Card from "./Card";
+import Carousel, { CarouselItem } from "./Carousel";
 import Container from "./Container";
 import Focus, { FocusItem } from "./Focus";
 import Form, { FormItem } from "./Form";
@@ -18,6 +19,8 @@ const components = {
   Alert,
   Button,
   Card,
+  Carousel,
+  CarouselItem,
   Col,
   Container,
   Content,
