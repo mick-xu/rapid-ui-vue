@@ -40,16 +40,42 @@
         </Focus>
       </Col>
     </Row>
+    <Row>
+      <Col span="12">
+        <Code :code="code"> </Code>
+      </Col>
+      <Col span="12"> </Col>
+    </Row>
   </Article>
 </template>
 
 <script>
 import Article from "@c/Article";
+import Code from "@c/Code";
 export default {
-  components: { Article },
+  components: { Article, Code },
   setup() {
     const ossPath = "https://devaid.oss-cn-qingdao.aliyuncs.com/assets/images";
-    return { ossPath };
+    const code =
+      '\
+<Focus>\n\
+  <FocusItem>\n\
+    <div class="slider slider-1">幻灯片一</div>\n\
+  </FocusItem>\n\
+  <FocusItem>\n\
+    <div class="slider slider-2">幻灯片二</div>\n\
+  </FocusItem>\n\
+  <FocusItem>\n\
+    <div class="slider slider-3">幻灯片三</div>\n\
+  </FocusItem>\n\
+  <FocusItem>\n\
+    <div class="slider slider-4">幻灯片四</div>\n\
+  </FocusItem>\n\
+  <FocusItem>\n\
+    <div class="slider slider-5">幻灯片五</div>\n\
+  </FocusItem>\n\
+</Focus>';
+    return { ossPath, code };
   },
 };
 </script>
