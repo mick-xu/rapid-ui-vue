@@ -1,69 +1,73 @@
 <template>
-  <Article title="Carousel 跑马灯">
+  <Article title="Carousel 走马灯">
+    <p>走马灯图片轮播组件，支持鼠标悬停时停止轮播，方便操控左右按钮</p>
     <section>
       <Carousel>
-        <CarouselItem title="1">
-          <div class="slider slider-1">幻灯片一</div>
+        <CarouselItem>
+          <img :src="`${ossPath}/bg-autumn.jpg`" title="一" />
         </CarouselItem>
-        <CarouselItem title="2">
-          <div class="slider slider-2">幻灯片二</div>
+        <CarouselItem>
+          <img :src="`${ossPath}/bg-highway.jpg`" title="二" />
         </CarouselItem>
-        <CarouselItem title="3">
-          <div class="slider slider-3">幻灯片三</div>
+        <CarouselItem>
+          <img :src="`${ossPath}/bg-technology.jpg`" title="三" />
         </CarouselItem>
-        <CarouselItem title="4">
-          <div class="slider slider-4">幻灯片四</div>
+        <CarouselItem>
+          <img :src="`${ossPath}/bg-building.jpg`" title="四" />
         </CarouselItem>
-        <CarouselItem title="5">
-          <div class="slider slider-5">幻灯片五</div>
+        <CarouselItem>
+          <img :src="`${ossPath}/bg-forest.jpg`" title="五" />
         </CarouselItem>
-        <CarouselItem title="6">
-          <div class="slider slider-6">幻灯片六</div>
+        <CarouselItem>
+          <img :src="`${ossPath}/bg-photography.jpg`" title="六" />
         </CarouselItem>
-        <CarouselItem title="7">
-          <div class="slider slider-3">幻灯片七</div>
+        <CarouselItem>
+          <img :src="`${ossPath}/banner.png`" title="七" />
         </CarouselItem>
       </Carousel>
+      <Code :code="code"></Code>
     </section>
   </Article>
 </template>
 
 <script>
 import Article from "@c/Article";
+import Code from "@c/Code";
 export default {
-  components: { Article },
+  components: { Article, Code },
   setup() {
     const ossPath = "https://devaid.oss-cn-qingdao.aliyuncs.com/assets/images";
-    return { ossPath };
+    const code =
+      '\
+<Carousel :autoplay="true" :interval="3000" :displayCount="6">\n\
+    <CarouselItem>\n\
+      <img :src="`${ossPath}/bg-autumn.jpg`" />\n\
+    </CarouselItem>\n\
+    <CarouselItem>\n\
+      <img :src="`${ossPath}/bg-highway.jpg`" />\n\
+    </CarouselItem>\n\
+    <CarouselItem>\n\
+      <img :src="`${ossPath}/bg-technology.jpg`" />\n\
+    </CarouselItem>\n\
+    <CarouselItem>\n\
+      <img :src="`${ossPath}/bg-building.jpg`" />\n\
+    </CarouselItem>\n\
+    <CarouselItem>\n\
+      <img :src="`${ossPath}/bg-forest.jpg`" />\n\
+    </CarouselItem>\n\
+    <CarouselItem>\n\
+      <img :src="`${ossPath}/bg-photography.jpg`" />\n\
+    </CarouselItem>\n\
+    <CarouselItem>\n\
+      <img :src="`${ossPath}/banner.png`" />\n\
+    </CarouselItem>\n\
+</Carousel>';
+    return { ossPath, code };
   },
 };
 </script>
 
 <style lang="less" scoped>
-.slider {
-  height: 100px;
-  text-align: center;
-  line-height: 100px;
-
-  &-1 {
-    background: #f0f0f0;
-  }
-  &-2 {
-    background: #e0e0e0;
-  }
-  &-3 {
-    background: #f6f6f6;
-  }
-  &-4 {
-    background: #e6e6e6;
-  }
-  &-5 {
-    background: #d0d0d0;
-  }
-  &-6 {
-    background: #eee;
-  }
-}
 img {
   min-height: 100px;
 }
