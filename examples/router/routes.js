@@ -84,6 +84,26 @@ export default [
         ],
       },
       {
+        path: "nav",
+        name: "nav",
+        title: "菜单导航",
+        component: Components,
+        children: [
+          {
+            path: "menu",
+            name: "menu",
+            title: "Menu 菜单",
+            component: () => import("@/views/components/Menu"),
+          },
+          {
+            path: "pagination",
+            name: "pagination",
+            title: "Pagination 分页",
+            component: () => import("@/views/components/Pagination"),
+          },
+        ],
+      },
+      {
         path: "tips",
         name: "tips",
         title: "提示",
@@ -94,6 +114,12 @@ export default [
             name: "alert",
             title: "Alert 警告",
             component: () => import("@/views/components/Alert"),
+          },
+          {
+            path: "modal",
+            name: "modal",
+            title: "Modal 对话框",
+            component: () => import("@/views/components/Modal"),
           },
         ],
       },
@@ -133,7 +159,7 @@ export default [
             path: "input",
             name: "input",
             title: "Input 输入框",
-            component: () => import("@/views/components/InputPage"),
+            component: () => import("@/views/components/Input"),
           },
         ],
       },

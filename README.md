@@ -11,6 +11,9 @@ npm install rapid-ui-vue --save
 yarn add rapid-ui-vue
 ```
 
+## 演示
+[演示地址](http://nas.devaid.cn:8084/components/common/button)
+
 ## 示例
 
 打开 main.js 文件

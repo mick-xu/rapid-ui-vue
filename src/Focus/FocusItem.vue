@@ -1,5 +1,5 @@
 <template>
-  <div :class="classes"><slot /></div>
+  <div :class="classes" @mouseenter="handleEnter" @mouseleave="handleLeave"><slot /></div>
 </template>
 
 <script>
@@ -16,10 +16,19 @@ export default {
     const classes = computed(() => {
       return ["focus-item", { ["active"]: focusScope.data.activeUid === instance.uid }];
     });
+    const handleEnter = () => {
+      focusScope.stopTimer();
+    };
+    const handleLeave = () => {
+      focusScope.startTimer();
+    };
     onMounted(() => {
+      if (!focusScope.data.itemHeight) {
+        focusScope.data.itemHeight = instance.vnode.el.clientHeight;
+      }
       focusScope.addItem(instance.uid);
     });
-    return { classes };
+    return { classes, handleEnter, handleLeave };
   },
 };
 </script>

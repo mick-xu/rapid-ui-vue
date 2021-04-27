@@ -1,11 +1,13 @@
 <template>
-  <Sider style="background: #f9f9f9; border-right: solid 1px #f0f0f0">
-    <Menu mode="vertical" @onClick="handleClick">
-      <MenuItem name="started">快速上手</MenuItem>
-      <MenuItem name="changelog">更新日志</MenuItem>
-    </Menu>
-  </Sider>
-  <Content><router-view /></Content>
+  <Layout>
+    <Sider style="background: #f9f9f9; border-right: solid 1px #f0f0f0">
+      <Menu mode="vertical" @onClick="handleClick">
+        <MenuItem name="started">快速上手</MenuItem>
+        <MenuItem name="changelog">更新日志</MenuItem>
+      </Menu>
+    </Sider>
+    <Content><router-view /></Content>
+  </Layout>
 </template>
 
 <script>

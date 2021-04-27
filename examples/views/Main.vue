@@ -7,16 +7,14 @@
           <Col>
             <Menu @onClick="handleClick">
               <MenuItem name="started">文档</MenuItem>
-              <MenuItem name="common">组件</MenuItem>
+              <MenuItem name="button">组件</MenuItem>
             </Menu>
           </Col>
         </Row>
       </Container>
     </Header>
     <Container>
-      <Layout>
-        <router-view />
-      </Layout>
+      <router-view />
     </Container>
     <Footer></Footer>
   </Layout>
