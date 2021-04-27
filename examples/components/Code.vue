@@ -1,5 +1,5 @@
 <template>
-  <pre><code ref="code"><slot /></code></pre>
+  <pre><code ref="container"><slot />{{`${code}`}}</code></pre>
 </template>
 
 <script>
@@ -17,14 +17,15 @@ import { onMounted, ref } from "vue";
 export default {
   props: {
     language: { type: String, default: "bash" },
+    code: { type: String, default: "" },
   },
   setup() {
-    const code = ref();
+    const container = ref();
     onMounted(() => {
       hljs.configure({});
-      hljs.highlightElement(code.value);
+      hljs.highlightElement(container.value);
     });
-    return { code };
+    return { container };
   },
 };
 </script>
