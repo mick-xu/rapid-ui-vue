@@ -3,21 +3,21 @@
     <Row>
       <Col span="12">
         <Focus>
-          <FocusItem title="1" desc=""
-            ><div class="slider slider-1">幻灯片一</div></FocusItem
-          >
-          <FocusItem title="2" desc=""
-            ><div class="slider slider-2">幻灯片二</div></FocusItem
-          >
-          <FocusItem title="3" desc=""
-            ><div class="slider slider-3">幻灯片三</div></FocusItem
-          >
-          <FocusItem title="4" desc=""
-            ><div class="slider slider-4">幻灯片四</div></FocusItem
-          >
-          <FocusItem title="5" desc=""
-            ><div class="slider slider-5">幻灯片五</div></FocusItem
-          >
+          <FocusItem title="1" desc="">
+            <div class="slider slider-1">幻灯片一</div>
+          </FocusItem>
+          <FocusItem title="2" desc="">
+            <div class="slider slider-2">幻灯片二</div>
+          </FocusItem>
+          <FocusItem title="3" desc="">
+            <div class="slider slider-3">幻灯片三</div>
+          </FocusItem>
+          <FocusItem title="4" desc="">
+            <div class="slider slider-4">幻灯片四</div>
+          </FocusItem>
+          <FocusItem title="5" desc="">
+            <div class="slider slider-5">幻灯片五</div>
+          </FocusItem>
         </Focus>
       </Col>
       <Col span="12">
