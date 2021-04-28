@@ -10,7 +10,7 @@ import hljs from "highlight.js";
 // import htmlbars from "highlight.js/lib/languages/htmlbars";
 // import bash from "highlight.js/lib/languages/bash";
 // import shell from "highlight.js/lib/languages/shell";
-import "highlight.js/styles/github.css";
+import "highlight.js/styles/stackoverflow-light.css";
 
 import { onMounted, ref } from "vue";
 
@@ -36,8 +36,9 @@ pre {
     padding: 12px 16px;
     border-radius: 3px;
     font-family: Lucida Console, Consolas;
-    color: rgba(0, 0, 0, 0.75);
+    color: #666;
     line-height: 18px;
+    background: #f6f6f6;
   }
 }
 </style>
