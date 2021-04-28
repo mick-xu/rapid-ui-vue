@@ -1,5 +1,5 @@
 <template>
-  <div class="table-wrap">
+  <div :class="wrapClasses">
     <table :class="classes">
       <thead class="table-thead">
         <slot name="header">
@@ -13,9 +13,7 @@
       </thead>
       <tfoot class="table-tfoot">
         <slot name="footer">
-          <tr>
-            <td></td>
-          </tr>
+          <tr></tr>
         </slot>
       </tfoot>
       <tbody class="table-tbody">
@@ -61,10 +59,13 @@ export default {
     stripe: { type: Boolean, default: false },
   },
   setup(props) {
-    const classes = computed(() => {
-      return ["table", `table-${props.size}`];
+    const wrapClasses = computed(() => {
+      return ["table-wrap", { ["table-bordered"]: props.bordered }];
     });
-    return { classes };
+    const classes = computed(() => {
+      return ["table", `table-${props.size}`, { ["table-striped"]: props.stripe }];
+    });
+    return { wrapClasses, classes };
   },
 };
 </script>

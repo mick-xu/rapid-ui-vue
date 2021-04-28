@@ -9,12 +9,15 @@
 @table-border-color: @border-color-split;
 @table-row-hover-bg: #f5f7fa;
 @table-font-size: @font-size-base;
+@table-border: @border-width-base @border-style-base @table-border-color;
+@table-bordered-row-bg: #fafafa;
 
 @table-prefix: table;
 
-.@{table-prefix}-wrapper {
+.@{table-prefix}-wrap {
   width: 100%;
   clear: both;
+  box-sizing: border-box;
   .clearfix();
 }
 
@@ -64,6 +67,37 @@
   @table-padding-horizontal-sm,
   @table-font-size
 );
+
+.@{table-prefix}-striped {
+  > tbody > tr:nth-child(even) > td {
+    background: @table-bordered-row-bg;
+  }
+  > tbody {
+    tr:hover {
+      td {
+        background: @table-row-hover-bg;
+      }
+    }
+  }
+}
+
+.@{table-prefix}-bordered {
+  border-left: @table-border;
+  border-top: @table-border;
+
+  .table {
+    > thead > tr > th,
+    > tbody > tr > td,
+    > tfoot > tr > th,
+    > tfoot > tr > td {
+      border-right: @table-border;
+    }
+
+    > thead > tr > th {
+      background: @table-row-hover-bg;
+    }
+  }
+}
 
 .table-size(@size, @padding-vertical, @padding-horizontal, @font-size) {
   .@{table-prefix}.@{table-prefix}-@{size} {

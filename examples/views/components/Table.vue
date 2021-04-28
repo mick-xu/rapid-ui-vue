@@ -1,7 +1,7 @@
 <template>
   <Article title="Table 表格">
     <section>
-      <Table></Table>
+      <Table bordered stripe></Table>
       <h2>示例代码</h2>
       <Code></Code>
       <h2>API</h2>
