@@ -81,6 +81,18 @@ export default [
             title: "Layout 布局",
             component: () => import("@/views/components/Layout"),
           },
+          {
+            path: "container",
+            name: "container",
+            title: "Container 容器",
+            component: () => import("@/views/components/Container"),
+          },
+          {
+            path: "space",
+            name: "space",
+            title: "Space 间距",
+            component: () => import("@/views/components/Space"),
+          },
         ],
       },
       {
@@ -146,6 +158,12 @@ export default [
             name: "focus",
             title: "Focus 焦点图",
             component: () => import("@/views/components/Focus"),
+          },
+          {
+            path: "table",
+            name: "table",
+            title: "Table 表格",
+            component: () => import("@/views/components/Table"),
           },
         ],
       },
