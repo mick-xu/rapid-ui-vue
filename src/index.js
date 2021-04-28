@@ -13,6 +13,7 @@ import Menu, { MenuGroup, MenuItem, SubMenu } from "./Menu";
 import Modal from "./Modal";
 import Pagination from "./Pagination";
 import Space from "./Space";
+import Table from "./Table";
 import "./styles/index.less";
 
 const components = {
@@ -42,6 +43,7 @@ const components = {
   Sider,
   Space,
   SubMenu,
+  Table
 };
 
 const install = (Vue) => {

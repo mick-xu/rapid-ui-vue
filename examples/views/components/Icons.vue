@@ -2875,6 +2875,38 @@
         </li>
       </ul>
       <h2>API</h2>
+      <Table>
+        <template #header>
+          <tr>
+            <th>参数</th>
+            <th>说明</th>
+            <th>类型</th>
+            <th>可选值</th>
+            <th>默认值</th>
+          </tr>
+        </template>
+        <tr>
+          <td>name</td>
+          <td>图标名称</td>
+          <td>String</td>
+          <td>点击上面图标名称进行复制</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>fill</td>
+          <td>填充颜色</td>
+          <td>String</td>
+          <td>颜色值</td>
+          <td>#666</td>
+        </tr>
+        <tr>
+          <td>size</td>
+          <td>图标大小</td>
+          <td>Number, String</td>
+          <td>正整数</td>
+          <td>20</td>
+        </tr>
+      </Table>
     </section>
   </Article>
 </template>

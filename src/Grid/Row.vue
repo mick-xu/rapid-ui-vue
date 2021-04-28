@@ -1,10 +1,10 @@
 <template>
-  <div class="rapid-row" :class="classes" :style="styles"><slot /></div>
+  <div :class="classes" :style="styles"><slot /></div>
 </template>
 
 <script>
 import { computed, provide } from "vue";
-const prefixCls = "rapid";
+const prefixCls = "grid";
 export default {
   name: "Row",
   props: {
@@ -34,6 +34,7 @@ export default {
   setup(props) {
     const classes = computed(() => {
       return {
+        [`${prefixCls}-row`]: true,
         [`${prefixCls}-row-no-wrap`]: props.wrap === false,
         [`${prefixCls}-row-${props.justify}`]: props.justify,
         [`${prefixCls}-row-${props.align}`]: props.align,

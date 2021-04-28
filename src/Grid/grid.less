@@ -1,9 +1,7 @@
-@prefix: "rapid";
-@row: ~"@{prefix}-row";
-@col: ~"@{prefix}-col";
+@grid-prefix: grid;
 @grid-columns: 24;
 
-.@{row} {
+.@{grid-prefix}-row {
   display: flex;
   flex-flow: row wrap;
 
@@ -49,7 +47,7 @@
   }
 }
 
-.@{col} {
+.@{grid-prefix}-col {
   position: relative;
   max-width: 100%;
   min-height: 1px;
@@ -58,7 +56,7 @@
 .loop-columns(@grid-columns);
 
 .loop-columns(@index) when(@index>0) {
-  .@{col}-@{index} {
+  .@{grid-prefix}-col-@{index} {
     display: block;
     flex: 0 0 percentage((@index / @grid-columns));
     max-width: percentage((@index / @grid-columns));
