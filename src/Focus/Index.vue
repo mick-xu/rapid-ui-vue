@@ -60,7 +60,7 @@ import {
 export default {
   name: "Focus",
   props: {
-    autoPlay: { type: Boolean, default: true },
+    autoplay: { type: Boolean, default: true },
     interval: { type: Number, default: 3000 },
   },
   setup(props) {
@@ -87,7 +87,7 @@ export default {
     };
 
     const startTimer = () => {
-      if (props.autoPlay && props.interval > 0) {
+      if (props.autoplay && props.interval > 0) {
         data.timer = setInterval(() => nextHandler(), props.interval);
       }
     };
