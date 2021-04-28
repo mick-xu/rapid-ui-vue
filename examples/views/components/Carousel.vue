@@ -25,7 +25,41 @@
           <img :src="`${ossPath}/banner.png`" title="七" />
         </CarouselItem>
       </Carousel>
+      <h2>示例代码</h2>
       <Code :code="code"></Code>
+      <h2>API</h2>
+      <Table>
+        <template #header>
+          <tr>
+            <th>参数</th>
+            <th>说明</th>
+            <th>类型</th>
+            <th>可选值</th>
+            <th>默认值</th>
+          </tr>
+        </template>
+        <tr>
+          <td>autoplay</td>
+          <td>是否自动播放</td>
+          <td>Boolen</td>
+          <td>true, false</td>
+          <td>true</td>
+        </tr>
+        <tr>
+          <td>displayCount</td>
+          <td>显示 CarouselItem 的个数</td>
+          <td>Number</td>
+          <td>大于 1 的整数</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>interval</td>
+          <td>播放时间间隔</td>
+          <td>Number</td>
+          <td>整数，单位为毫秒</td>
+          <td>3000</td>
+        </tr>
+      </Table>
     </section>
   </Article>
 </template>
