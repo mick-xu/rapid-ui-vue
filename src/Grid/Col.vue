@@ -3,6 +3,7 @@
 </template>
 
 <script>
+const prefixCls = "grid";
 import { inject, computed } from "vue";
 export default {
   name: "Col",
@@ -30,7 +31,7 @@ export default {
       return wrapPadding;
     });
     const classes = computed(() => {
-      return ["rapid-col", { [`rapid-col-${props.span}`]: props.span }];
+      return [`${prefixCls}-col`, { [`${prefixCls}-col-${props.span}`]: props.span }];
     });
     return { styles, classes };
   },
