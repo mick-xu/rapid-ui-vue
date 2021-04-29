@@ -7,7 +7,8 @@
 @switch-min-width: 44px;
 @switch-pin-size: @switch-height - 4px;
 @switch-padding: 2px;
-@switch-bg: @component-background;
+@switch-bg: @light-color;
+@switch-bg-checked: @component-background;
 @switch-color: @primary-color;
 
 .@{switch-prefix} {
@@ -56,6 +57,9 @@
 
   &-checked &-handle {
     left: calc(100% - @switch-pin-size - @switch-padding);
+    &::before {
+      background-color: @switch-bg-checked;
+    }
   }
 
   &-circle {
