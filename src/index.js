@@ -1,4 +1,5 @@
 import Alert from "./Alert";
+import Breadcrumb, { BreadcrumbItem } from "./Breadcrumb";
 import Button from "./Button";
 import Card from "./Card";
 import Carousel, { CarouselItem } from "./Carousel";
@@ -19,6 +20,8 @@ import "./styles/index.less";
 
 const components = {
   Alert,
+  Breadcrumb,
+  BreadcrumbItem,
   Button,
   Card,
   Carousel,
