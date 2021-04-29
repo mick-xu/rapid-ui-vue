@@ -102,6 +102,12 @@ export default [
         component: Components,
         children: [
           {
+            path: "breadcrumb",
+            name: "breadcrumb",
+            title: "Breadcrumb 面包屑",
+            component: () => import("@/views/components/Breadcrumb"),
+          },
+          {
             path: "menu",
             name: "menu",
             title: "Menu 菜单",
