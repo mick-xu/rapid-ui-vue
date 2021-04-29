@@ -179,6 +179,12 @@ export default [
             title: "Input 输入框",
             component: () => import("@/views/components/Input"),
           },
+          {
+            path: "switch",
+            name: "switch",
+            title: "Switch 开关",
+            component: () => import("@/views/components/Switch"),
+          },
         ],
       },
     ],
