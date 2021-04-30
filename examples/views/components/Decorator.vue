@@ -93,7 +93,7 @@
         </tr>
         <tr>
           <td>type</td>
-          <td>间距大小</td>
+          <td>类型，挂件样式</td>
           <td>String</td>
           <td>label, marker</td>
           <td>marker</td>
