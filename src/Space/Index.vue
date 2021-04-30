@@ -1,5 +1,18 @@
+<template>
+  <div :class="classes">
+    <div
+      v-for="(item, index) in items"
+      :class="itemClasses"
+      :style="index !== 0 && itemStyles"
+      :key="index"
+    >
+      <component :is="item" />
+    </div>
+  </div>
+</template>
+
 <script>
-import { h, onMounted, computed } from "vue";
+import { computed } from "vue";
 export default {
   name: "Space",
   props: {
@@ -10,31 +23,24 @@ export default {
     const classes = computed(() => {
       return ["space", `space-${props.direction}`];
     });
-    const items = slots.default().map((element) => {
-      return h("div", { class: "space-item", style: "margin-top:10px" }, element);
+    const itemClasses = computed(() => {
+      return {
+        "space-item": props.size === "middle",
+        "space-item-sm": props.size === "small",
+      };
     });
-    onMounted(() => {});
-    return () => h("div", { class: classes.value }, items);
+    const itemStyles = computed(() => {
+      const styles = {};
+      if (props.size === "small" || props.size === "middle") {
+        return styles;
+      }
+      const margin = props.direction === "horizontal" ? "marginLeft" : "marginTop";
+      const marginValue = props.size.endsWith("px") ? props.size : `${props.size}px`;
+      styles[margin] = marginValue;
+      return styles;
+    });
+    const items = slots.default();
+    return { classes, itemClasses, itemStyles, items };
   },
 };
 </script>
-
-<style lang="less">
-@space-prefix: space;
-.space {
-  display: inline-flex;
-  flex-wrap: wrap;
-}
-.space-horizontal {
-  flex-direction: row;
-  .@{space-prefix}-item + .@{space-prefix}-item {
-    margin-left: 8px;
-  }
-}
-.space-vertical {
-  flex-direction: column;
-  .@{space-prefix}-item + .@{space-prefix}-item {
-    margin-top: 8px;
-  }
-}
-</style>
