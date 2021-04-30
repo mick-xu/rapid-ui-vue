@@ -1,0 +1,134 @@
+@decorator-prefix: decorator;
+
+.@{decorator-prefix}-wrap {
+  position: relative;
+  display: inline-block;
+  > * {
+    vertical-align: middle;
+  }
+}
+
+.@{decorator-prefix} {
+  position: absolute;
+  > div {
+    box-sizing: border-box;
+    display: inline-block;
+  }
+  .corner-label {
+    position: relative;
+    padding: 6px 16px 6px 16px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+    }
+  }
+  .corner-marker {
+    position: absolute;
+    text-align: center;
+    height: 22px;
+    line-height: 20px;
+    font-size: 12px;
+    font-weight: 400;
+    width: 72px;
+    background-color: red;
+    color: white;
+    user-select: none;
+  }
+}
+
+.@{decorator-prefix}-label {
+  .corner-label {
+    background: #e0e0e0;
+    color: #616161;
+
+    &::after {
+      border: 0 solid transparent;
+    }
+  }
+}
+
+.@{decorator-prefix}-marker {
+  height: 51px;
+  width: 51px;
+  overflow: hidden;
+}
+
+.left-top {
+  top: 0;
+  left: 0;
+  .corner-label {
+    margin-left: -11px;
+    margin-top: 11px;
+    &::after {
+      top: 100%;
+      left: 0;
+      border-top-color: #bebebe;
+      border-width: 9px 0 0 11px;
+    }
+  }
+  .corner-marker {
+    transform: rotate(-45deg);
+    top: 7px;
+    left: -18px;
+  }
+}
+.right-top {
+  top: 0;
+  right: 0;
+  .corner-label {
+    margin-right: -11px;
+    margin-top: 11px;
+    &::after {
+      top: 100%;
+      right: 0;
+      border-top-color: #bebebe;
+      border-width: 9px 11px 0px 0px;
+    }
+  }
+  .corner-marker {
+    transform: rotate(45deg);
+    top: 7px;
+    right: -18px;
+  }
+}
+.left-bottom {
+  left: 0;
+  bottom: 0;
+  .corner-label {
+    margin-left: -11px;
+    margin-bottom: 11px;
+    &::after {
+      bottom: 100%;
+      left: 0;
+      border-bottom-color: #bebebe;
+      border-width: 0px 0px 9px 11px;
+    }
+  }
+  .corner-marker {
+    transform: rotate(45deg);
+    bottom: 7px;
+    left: -18px;
+  }
+}
+.right-bottom {
+  right: 0;
+  bottom: 0;
+  .corner-label {
+    margin-right: -11px;
+    margin-bottom: 11px;
+    &::after {
+      bottom: 100%;
+      right: 0;
+      border-bottom-color: #bebebe;
+      border-width: 0px 11px 9px 0px;
+    }
+  }
+  .corner-marker {
+    transform: rotate(-45deg);
+    bottom: 7px;
+    right: -18px;
+  }
+}

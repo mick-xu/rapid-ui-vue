@@ -1,0 +1,73 @@
+@import "../styles/themes/default.less";
+
+@switch-prefix: switch;
+
+@switch-height: 22px;
+@switch-duration: 0.2s;
+@switch-min-width: 44px;
+@switch-pin-size: @switch-height - 4px;
+@switch-padding: 2px;
+@switch-bg: @light-color;
+@switch-bg-checked: @component-background;
+@switch-color: @primary-color;
+
+.@{switch-prefix} {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  min-width: @switch-min-width;
+  height: @switch-height;
+  vertical-align: middle;
+  background: @disabled-color;
+  cursor: pointer;
+  transition: all @switch-duration;
+  user-select: none;
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px fade(@disabled-color, 10%);
+  }
+
+  &:focus:hover {
+    box-shadow: none;
+  }
+
+  &-checked {
+    background-color: @switch-color;
+  }
+
+  &-handle {
+    position: absolute;
+    width: @switch-pin-size;
+    height: @switch-pin-size;
+    transition: all @switch-duration ease-in-out;
+    top: 50%;
+    transform: translateY(-50%);
+    left: @switch-padding;
+
+    &::before {
+      position: absolute;
+      background-color: @switch-bg;
+      content: "";
+      width: 100%;
+      height: 100%;
+      transition: all @switch-duration ease-in-out;
+    }
+  }
+
+  &-checked &-handle {
+    left: calc(100% - @switch-pin-size - @switch-padding);
+    &::before {
+      background-color: @switch-bg-checked;
+    }
+  }
+
+  &-circle {
+    border-radius: 100px;
+    .@{switch-prefix}-handle {
+      &::before {
+        border-radius: 50%;
+      }
+    }
+  }
+}

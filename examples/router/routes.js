@@ -102,6 +102,12 @@ export default [
         component: Components,
         children: [
           {
+            path: "breadcrumb",
+            name: "breadcrumb",
+            title: "Breadcrumb 面包屑",
+            component: () => import("@/views/components/Breadcrumb"),
+          },
+          {
             path: "menu",
             name: "menu",
             title: "Menu 菜单",
@@ -141,6 +147,7 @@ export default [
         title: "展示",
         component: Components,
         children: [
+          
           {
             path: "card",
             name: "card",
@@ -152,6 +159,12 @@ export default [
             name: "carousel",
             title: "Carousel 走马灯",
             component: () => import("@/views/components/Carousel"),
+          },
+          {
+            path: "decorator",
+            name: "decorator",
+            title: "Decorator 小装饰",
+            component: () => import("@/views/components/Decorator"),
           },
           {
             path: "focus",
@@ -178,6 +191,12 @@ export default [
             name: "input",
             title: "Input 输入框",
             component: () => import("@/views/components/Input"),
+          },
+          {
+            path: "switch",
+            name: "switch",
+            title: "Switch 开关",
+            component: () => import("@/views/components/Switch"),
           },
         ],
       },

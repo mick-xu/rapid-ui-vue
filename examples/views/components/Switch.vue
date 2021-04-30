@@ -1,18 +1,10 @@
 <template>
-  <Article title="Card 卡片">
-    <p></p>
+  <Article title="Switch 开关">
     <section>
-      <h2>代码演示</h2>
-      <Row>
-        <Col span="12">
-          <Card title="Card 卡片">
-            <p style="margin: 0">Card content</p>
-            <p style="margin: 0">Card content</p>
-            <p style="margin: 0">Card content</p>
-          </Card>
-        </Col>
-        <Col span="12"><Card title="Card 卡片"></Card></Col>
-      </Row>
+      <Space>
+        <Switch v-model="switchValue" shape="square"></Switch>
+        <Switch v-model="switchValue" @onChange="change"></Switch>
+      </Space>
       <h2>API</h2>
       <Table>
         <template #header>
@@ -25,18 +17,18 @@
           </tr>
         </template>
         <tr>
-          <td>bordered</td>
-          <td>是否显示边框</td>
+          <td>modelValue</td>
+          <td>绑定值</td>
           <td>Boolean</td>
           <td>true, false</td>
           <td>false</td>
         </tr>
         <tr>
-          <td>title</td>
-          <td>标题</td>
+          <td>shape</td>
+          <td>开关形状</td>
           <td>String</td>
-          <td>-</td>
-          <td>-</td>
+          <td>circle, square</td>
+          <td>circle</td>
         </tr>
       </Table>
     </section>
@@ -45,10 +37,15 @@
 
 <script>
 import Article from "@c/Article";
+import { ref } from "vue";
 export default {
   components: { Article },
   setup() {
-    return {};
+    const switchValue = ref(true);
+    const change = (val) => {
+      console.log(val);
+    };
+    return { switchValue, change };
   },
 };
 </script>

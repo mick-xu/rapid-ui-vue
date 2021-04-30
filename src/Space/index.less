@@ -1,0 +1,25 @@
+@space-prefix: space;
+@item-space: 8px;
+.space {
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: inherit;
+}
+.space-horizontal {
+  flex-direction: row;
+  .@{space-prefix}-item + .@{space-prefix}-item {
+    margin-left: @item-space;
+  }
+  .@{space-prefix}-item-sm + .@{space-prefix}-item-sm {
+    margin-left: calc(@item-space / 2);
+  }
+}
+.space-vertical {
+  flex-direction: column;
+  .@{space-prefix}-item + .@{space-prefix}-item {
+    margin-top: @item-space;
+  }
+  .@{space-prefix}-item-sm + .@{space-prefix}-item-sm {
+    margin-top: calc(@item-space / 2);
+  }
+}

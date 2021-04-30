@@ -26,7 +26,7 @@
             <td>size</td>
             <td>间距大小</td>
             <td>String, Number</td>
-            <td>middle, small, 8, 16</td>
+            <td>middle, small, 8, 16, 10px</td>
             <td>middle</td>
         </tr>
       </Table>

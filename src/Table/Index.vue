@@ -4,10 +4,7 @@
       <thead class="table-thead">
         <slot name="header">
           <tr>
-            <th>ID</th>
-            <th>姓名</th>
-            <th>手机号</th>
-            <th>地址</th>
+            <th v-for="item in cloumns" :key="item.key">{{ item.title }}</th>
           </tr>
         </slot>
       </thead>
@@ -18,23 +15,8 @@
       </tfoot>
       <tbody class="table-tbody">
         <slot>
-          <tr>
-            <td>1</td>
-            <td>王小虎</td>
-            <td>15063358031</td>
-            <td>济南高新区舜华路街道</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>王小虎</td>
-            <td>15063358031</td>
-            <td>济南高新区舜华路街道</td>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>王小虎</td>
-            <td>15063358031</td>
-            <td>济南高新区舜华路街道</td>
+          <tr v-for="row in data" :key="row.id">
+            <td v-for="(value, key) in row" :key="key">{{ value }}</td>
           </tr>
         </slot>
       </tbody>
@@ -43,12 +25,14 @@
 </template>
 
 <script>
-import { computed } from "vue";
+import { computed, onMounted } from "vue";
 export default {
   name: "Table",
   props: {
     bordered: { type: Boolean, default: false },
     className: { type: String, default: "" },
+    cloumns: { type: Array, default: () => [] },
+    data: { type: Array, default: () => [] },
     size: {
       type: String,
       default: "default",
@@ -60,11 +44,12 @@ export default {
   },
   setup(props) {
     const wrapClasses = computed(() => {
-      return ["table-wrap", { ["table-bordered"]: props.bordered }];
+      return ["table-wrap", { ["table-bordered"]: props.bordered }, props.className];
     });
     const classes = computed(() => {
       return ["table", `table-${props.size}`, { ["table-striped"]: props.stripe }];
     });
+    onMounted(() => {});
     return { wrapClasses, classes };
   },
 };

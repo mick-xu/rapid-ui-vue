@@ -1,8 +1,10 @@
 import Alert from "./Alert";
+import Breadcrumb, { BreadcrumbItem } from "./Breadcrumb";
 import Button from "./Button";
 import Card from "./Card";
 import Carousel, { CarouselItem } from "./Carousel";
 import Container from "./Container";
+import Decorator from "./Decorator";
 import Focus, { FocusItem } from "./Focus";
 import Form, { FormItem } from "./Form";
 import { Col, Row } from "./Grid";
@@ -13,11 +15,14 @@ import Menu, { MenuGroup, MenuItem, SubMenu } from "./Menu";
 import Modal from "./Modal";
 import Pagination from "./Pagination";
 import Space from "./Space";
+import Switch from "./Switch";
 import Table from "./Table";
 import "./styles/index.less";
 
 const components = {
   Alert,
+  Breadcrumb,
+  BreadcrumbItem,
   Button,
   Card,
   Carousel,
@@ -25,6 +30,7 @@ const components = {
   Col,
   Container,
   Content,
+  Decorator,
   Focus,
   FocusItem,
   Footer,
@@ -43,7 +49,8 @@ const components = {
   Sider,
   Space,
   SubMenu,
-  Table
+  Switch,
+  Table,
 };
 
 const install = (Vue) => {

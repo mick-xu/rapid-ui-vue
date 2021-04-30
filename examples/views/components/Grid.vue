@@ -17,11 +17,8 @@
       <Col span="4"><div class="block-blue">col-4</div></Col>
       <Col span="4"><div class="block-blue">col-4</div></Col>
       <Col span="4"><div class="block-blue">col-4</div></Col>
-      <Col span="4"><div class="block-blue">col-4</div></Col>
-      <Col span="4"><div class="block-blue">col-4</div></Col>
-      <Col span="4"><div class="block-blue">col-4</div></Col>
-      <Col span="4"><div class="block-blue">col-4</div></Col>
-      <Col span="4"><div class="block-blue">col-4</div></Col>
+      <Col span="12"><div class="block-blue">col-12</div></Col>
+      <Col span="8"><div class="block-blue">col-8</div></Col>
     </Row>
   </Article>
 </template>
