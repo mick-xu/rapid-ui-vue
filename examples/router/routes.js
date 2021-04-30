@@ -147,6 +147,7 @@ export default [
         title: "展示",
         component: Components,
         children: [
+          
           {
             path: "card",
             name: "card",
@@ -158,6 +159,12 @@ export default [
             name: "carousel",
             title: "Carousel 走马灯",
             component: () => import("@/views/components/Carousel"),
+          },
+          {
+            path: "decorator",
+            name: "decorator",
+            title: "Decorator 小装饰",
+            component: () => import("@/views/components/Decorator"),
           },
           {
             path: "focus",

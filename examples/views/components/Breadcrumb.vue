@@ -2,6 +2,7 @@
   <Article title="Breadcrumb 面包屑">
     <p>网站面包屑组件</p>
     <section>
+      <h2>示例</h2>
       <Breadcrumb>
         <BreadcrumbItem>首页</BreadcrumbItem>
         <BreadcrumbItem>新闻</BreadcrumbItem>
