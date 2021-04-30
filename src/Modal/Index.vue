@@ -28,9 +28,9 @@ export default {
   name: "Modal",
   props: {
     mask: { type: Boolean, default: true },
+    modelValue: { type: Boolean, default: false },
     style: { type: [String, Object], default: () => {} },
     title: { type: String, default: "" },
-    modelValue: { type: Boolean, default: false },
     width: { type: [String, Number], default: 520 },
     zIndex: { type: Number, default: 999 },
   },
