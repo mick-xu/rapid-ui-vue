@@ -4,6 +4,7 @@ import Button from "./Button";
 import Card from "./Card";
 import Carousel, { CarouselItem } from "./Carousel";
 import Container from "./Container";
+import Decorator from "./Decorator";
 import Focus, { FocusItem } from "./Focus";
 import Form, { FormItem } from "./Form";
 import { Col, Row } from "./Grid";
@@ -29,6 +30,7 @@ const components = {
   Col,
   Container,
   Content,
+  Decorator,
   Focus,
   FocusItem,
   Footer,
