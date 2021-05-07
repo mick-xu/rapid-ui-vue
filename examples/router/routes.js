@@ -119,6 +119,12 @@ export default [
             title: "Pagination 分页",
             component: () => import("@/views/components/Pagination"),
           },
+          {
+            path: "tabs",
+            name: "tabs",
+            title: "Tabs 标签页",
+            component: () => import("@/views/components/Tabs"),
+          },
         ],
       },
       {
