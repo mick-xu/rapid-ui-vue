@@ -54,7 +54,6 @@ export default {
         leftValue += barWidthArray.value[i] + 32;
       }
       barStyles.left = `${leftValue}px`;
-      console.log(barWidthArray[index]);
       emit("update:modelValue", data.currentTab);
     };
     const instance = getCurrentInstance();
