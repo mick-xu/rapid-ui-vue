@@ -17,6 +17,7 @@ import Pagination from "./Pagination";
 import Space from "./Space";
 import Switch from "./Switch";
 import Table from "./Table";
+import Tabs, { TabPane } from "./Tabs";
 import "./styles/index.less";
 
 const components = {
@@ -51,6 +52,8 @@ const components = {
   SubMenu,
   Switch,
   Table,
+  TabPane,
+  Tabs,
 };
 
 const install = (Vue) => {
