@@ -140,6 +140,12 @@ export default [
             component: () => import("@/views/components/Alert"),
           },
           {
+            path: "message",
+            name: "message",
+            title: "Message 消息",
+            component: () => import("@/views/components/Message"),
+          },
+          {
             path: "modal",
             name: "modal",
             title: "Modal 对话框",

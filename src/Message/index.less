@@ -1,0 +1,79 @@
+@import "../styles/themes/default.less";
+
+@message-prefix: rapid-message;
+
+@message-default-border-color: fade(@default-color, 99%);
+@message-default-bg-color: fade(@default-color, 30%);
+@message-default-icon-color: @default-color;
+
+@message-dark-border-color: fade(@dark-color, 100%);
+@message-dark-bg-color: fade(@dark-color, 85%);
+@message-dark-icon-color: @dark-color;
+@message-dark-text-color: @light-color;
+
+@message-success-border-color: ~`colorPalette("@{success-color}", 3) `;
+@message-success-bg-color: ~`colorPalette("@{success-color}", 1) `;
+@message-success-icon-color: @success-color;
+
+@message-info-border-color: ~`colorPalette("@{info-color}", 3) `;
+@message-info-bg-color: ~`colorPalette("@{info-color}", 1) `;
+@message-info-icon-color: @info-color;
+
+@message-warning-border-color: ~`colorPalette("@{warning-color}", 3) `;
+@message-warning-bg-color: ~`colorPalette("@{warning-color}", 1) `;
+@message-warning-icon-color: @warning-color;
+
+@message-error-border-color: ~`colorPalette("@{error-color}", 3) `;
+@message-error-bg-color: ~`colorPalette("@{error-color}", 1) `;
+@message-error-icon-color: @error-color;
+
+.@{message-prefix} {
+  position: fixed;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  padding: 8px 16px;
+  border: solid 1px @message-default-border-color;
+  background: @message-default-bg-color;
+
+  &-success {
+    border-color: @message-success-border-color;
+    background: @message-success-bg-color;
+  }
+
+  &-error {
+    border-color: @message-error-border-color;
+    background: @message-error-bg-color;
+  }
+
+  &-warning {
+    border-color: @message-warning-border-color;
+    background: @message-warning-bg-color;
+  }
+
+  &-info,
+  &-loading {
+    border-color: @message-info-border-color;
+    background: @message-info-bg-color;
+  }
+
+  &-notice.move-up-leave {
+    animation-name: MessageMoveOut;
+    animation-duration: 0.3s;
+  }
+}
+
+@keyframes MessageMoveOut {
+  0% {
+    max-height: 150px;
+    padding: 8px;
+    opacity: 1;
+  }
+  100% {
+    max-height: 0;
+    padding: 0;
+    opacity: 0;
+  }
+}
