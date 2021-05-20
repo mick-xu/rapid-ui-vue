@@ -38,25 +38,50 @@
   border: solid 1px @message-default-border-color;
   background: @message-default-bg-color;
 
+  i.icon {
+    margin-right: 8px;
+  }
+
+  span {
+    vertical-align: middle;
+    line-height: @line-height-base;
+  }
+
   &-success {
     border-color: @message-success-border-color;
     background: @message-success-bg-color;
+    i.icon,
+    span {
+      color: @message-success-icon-color !important;
+    }
   }
 
   &-error {
     border-color: @message-error-border-color;
     background: @message-error-bg-color;
+    i.icon,
+    span {
+      color: @message-error-icon-color !important;
+    }
   }
 
   &-warning {
     border-color: @message-warning-border-color;
     background: @message-warning-bg-color;
+    i.icon,
+    span {
+      color: @message-warning-icon-color !important;
+    }
   }
 
   &-info,
   &-loading {
     border-color: @message-info-border-color;
     background: @message-info-bg-color;
+    i.icon,
+    span {
+      color: @message-info-icon-color !important;
+    }
   }
 
   &-notice.move-up-leave {

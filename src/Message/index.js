@@ -1,4 +1,4 @@
-import Message from "./Index.vue";
+import Message from "./Message";
 import "./index.less";
 
 export default Message;

@@ -45,7 +45,6 @@ const components = {
   Menu,
   MenuGroup,
   MenuItem,
-  Message,
   Modal,
   Pagination,
   Row,
@@ -58,10 +57,18 @@ const components = {
   Tabs,
 };
 
-const install = (Vue) => {
+const ProtoTypes = {
+  Message,
+};
+
+const install = (app) => {
   if (install.installed) return;
   Object.keys(components).forEach((key) => {
-    Vue.component(key, components[key]);
+    app.component(key, components[key]);
+  });
+
+  Object.keys(ProtoTypes).forEach((key) => {
+    app.config.globalProperties[key] = ProtoTypes[key];
   });
 };
 
@@ -69,4 +76,4 @@ if (typeof window !== "undefined" && window.Vue) {
   install(window.Vue);
 }
 
-export default { install, ...components };
+export default { install, ...components, ...ProtoTypes };
