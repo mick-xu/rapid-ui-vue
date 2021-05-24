@@ -2,9 +2,10 @@
 
 @message-prefix: rapid-message;
 
-@message-default-border-color: fade(@default-color, 99%);
-@message-default-bg-color: fade(@default-color, 30%);
+@message-default-border-color: fade(@default-color, 85%);
+@message-default-bg-color: @white;
 @message-default-icon-color: @default-color;
+@message-default-text-color: @dark-color;
 
 @message-dark-border-color: fade(@dark-color, 100%);
 @message-dark-bg-color: fade(@dark-color, 85%);
@@ -29,7 +30,7 @@
 
 .@{message-prefix} {
   position: fixed;
-  top: 8px;
+  top: 41px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
@@ -37,6 +38,7 @@
   padding: 8px 16px;
   border: solid 1px @message-default-border-color;
   background: @message-default-bg-color;
+  transition: top 0.3s ease-in-out;
 
   i.icon {
     margin-right: 8px;
@@ -47,58 +49,102 @@
     line-height: @line-height-base;
   }
 
+  &-default {
+    border-color: @message-default-border-color;
+    background: @message-default-bg-color;
+    span {
+      color: @message-default-text-color;
+    }
+  }
+
   &-success {
+    i.icon {
+      color: @message-success-icon-color;
+    }
+  }
+  &-error {
+    i.icon {
+      color: @message-error-icon-color;
+    }
+  }
+  &-warning {
+    i.icon {
+      color: @message-warning-icon-color;
+    }
+  }
+  &-info {
+    i.icon {
+      color: @message-info-icon-color;
+    }
+  }
+
+  &-loading {
+    i.icon {
+      color: @message-default-icon-color;
+    }
+  }
+
+  &-success-fill {
     border-color: @message-success-border-color;
     background: @message-success-bg-color;
-    i.icon,
     span {
-      color: @message-success-icon-color !important;
+      color: @message-success-icon-color;
     }
   }
 
-  &-error {
+  &-error-fill {
     border-color: @message-error-border-color;
     background: @message-error-bg-color;
-    i.icon,
     span {
-      color: @message-error-icon-color !important;
+      color: @message-error-icon-color;
     }
   }
 
-  &-warning {
+  &-warning-fill {
     border-color: @message-warning-border-color;
     background: @message-warning-bg-color;
-    i.icon,
     span {
-      color: @message-warning-icon-color !important;
+      color: @message-warning-icon-color;
     }
   }
 
-  &-info,
-  &-loading {
+  &-info-fill {
     border-color: @message-info-border-color;
     background: @message-info-bg-color;
-    i.icon,
     span {
-      color: @message-info-icon-color !important;
+      color: @message-info-icon-color;
     }
   }
+}
 
-  &-notice.move-up-leave {
-    animation-name: MessageMoveOut;
-    animation-duration: 0.3s;
+.message-enter-active {
+  animation: MessageMoveIn 0.3s;
+  transition: opacity 0.3s ease;
+}
+
+.message-leave-active {
+  animation: MessageMoveOut 0.3s;
+  transition: opacity 0.3s ease;
+}
+
+@keyframes MessageMoveIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -49px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
   }
 }
 
 @keyframes MessageMoveOut {
   0% {
-    max-height: 150px;
-    padding: 8px;
     opacity: 1;
+    transform: translate(-50%, 0);
   }
   100% {
-    max-height: 0;
-    padding: 0;
     opacity: 0;
+    transform: translate(-50%, -49px);
   }
 }
