@@ -3,7 +3,7 @@
     <div
       v-for="(item, index) in items"
       :class="itemClasses"
-      :style="index !== 0 && itemStyles"
+      :style="index > 0 && itemStyles"
       :key="index"
     >
       <component :is="item" />
@@ -16,7 +16,13 @@ import { computed } from "vue";
 export default {
   name: "Space",
   props: {
-    direction: { type: String, default: "horizontal" },
+    direction: {
+      type: String,
+      default: "horizontal",
+      validator: (val) => {
+        return ["horizontal", "vertical"].includes(val);
+      },
+    },
     size: { type: [String, Number], default: "middle" },
   },
   setup(props, { slots }) {
@@ -35,7 +41,7 @@ export default {
         return styles;
       }
       const margin = props.direction === "horizontal" ? "marginLeft" : "marginTop";
-      const marginValue = props.size.endsWith("px") ? props.size : `${props.size}px`;
+      const marginValue = typeof props.size === "number" ? `${props.size}px` : props.size;
       styles[margin] = marginValue;
       return styles;
     });
