@@ -1,7 +1,7 @@
 {
-  "_id": "rapid-ui@0.0.7",
-  "name": "rapid-ui-vue",
-  "version": "0.0.7",
+  "_id": "rapid-ui@0.0.8",
+  "name": "rapid-vui",
+  "version": "0.0.8",
   "private": false,
   "description": "快速创建响应式网站的 UI 库，擅长企业站、商城、论坛、博客等互联网 Web 项目，支持移动端",
   "main": "lib/rapid-ui.umd.min.js",

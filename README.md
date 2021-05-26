@@ -4,11 +4,15 @@
 
 ## 安装
 ```bash
-npm install rapid-ui-vue --save
+npm install rapid-ui-vue --save (0.0.8 之前版本)
+
+npm install rapid-vui --save (0.0.8 之后版本)
 ```
 
 ```bash
-yarn add rapid-ui-vue
+yarn add rapid-ui-vue (0.0.8 之前版本)
+
+yarn add rapid-vui (0.0.8 之后版本)
 ```
 
 ## 演示
@@ -21,8 +25,8 @@ yarn add rapid-ui-vue
 ```jsx
 import { createApp } from "vue";
 import App from "./App.vue";
-import RapidUI from "rapid-ui-vue";
-import 'rapid-ui-vue/lib/rapid-ui.css' // 引入样式
+import RapidUI from "rapid-vui";
+import 'rapid-vui/lib/rapid-ui.css' // 引入样式
 
 createApp(App)
   .use(RapidUI)

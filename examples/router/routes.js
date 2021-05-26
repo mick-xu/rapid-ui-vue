@@ -119,6 +119,12 @@ export default [
             title: "Pagination 分页",
             component: () => import("@/views/components/Pagination"),
           },
+          {
+            path: "tabs",
+            name: "tabs",
+            title: "Tabs 标签页",
+            component: () => import("@/views/components/Tabs"),
+          },
         ],
       },
       {
@@ -132,6 +138,12 @@ export default [
             name: "alert",
             title: "Alert 警告",
             component: () => import("@/views/components/Alert"),
+          },
+          {
+            path: "message",
+            name: "message",
+            title: "Message 消息",
+            component: () => import("@/views/components/Message"),
           },
           {
             path: "modal",

@@ -12,11 +12,13 @@ import Icon from "./Icon";
 import Input from "./Input";
 import Layout, { Content, Footer, Header, Sider } from "./Layout";
 import Menu, { MenuGroup, MenuItem, SubMenu } from "./Menu";
+import Message from "./Message";
 import Modal from "./Modal";
 import Pagination from "./Pagination";
 import Space from "./Space";
 import Switch from "./Switch";
 import Table from "./Table";
+import Tabs, { TabPane } from "./Tabs";
 import "./styles/index.less";
 
 const components = {
@@ -51,12 +53,22 @@ const components = {
   SubMenu,
   Switch,
   Table,
+  TabPane,
+  Tabs,
 };
 
-const install = (Vue) => {
+const ProtoTypes = {
+  Message,
+};
+
+const install = (app) => {
   if (install.installed) return;
   Object.keys(components).forEach((key) => {
-    Vue.component(key, components[key]);
+    app.component(key, components[key]);
+  });
+
+  Object.keys(ProtoTypes).forEach((key) => {
+    app.config.globalProperties[key] = ProtoTypes[key];
   });
 };
 
@@ -64,4 +76,4 @@ if (typeof window !== "undefined" && window.Vue) {
   install(window.Vue);
 }
 
-export default { install, ...components };
+export default { install, ...components, ...ProtoTypes };

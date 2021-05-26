@@ -5,14 +5,15 @@
       组件库，内置丰富的网站组件，适合快速搭建前台网站界面和网站原型。
     </p>
     <h2>安装</h2>
-    <Code>$ npm install rapid-ui-vue --save</Code>
-    <Code>$ yarn add rapid-ui-vue</Code>
+    <Code>$ npm install rapid-vui --save</Code>
+    <Code>$ yarn add rapid-vui</Code>
     <h2>使用</h2>
     <p>打开 mian.js 文件</p>
     <Code>
       import { createApp } from "vue";<br />
       import App from "./App.vue";<br />
-      import RapidUI from "rapid-ui-vue"; <br />
+      import RapidUI from "rapid-vui"; <br />
+      import 'rapid-vui/lib/rapid-ui.css'; <br />
       <br />
       createApp(App) <br /> .use(RapidUI)<br /> .mount("#app");
     </Code>

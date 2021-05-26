@@ -8,7 +8,7 @@ export default {
   name: "Icon",
   props: {
     name: { type: String, default: "", required: true },
-    fill: { type: String, default: "#666" },
+    fill: { type: String, default: "" },
     size: { type: [Number, String], default: 20 },
   },
   setup(props) {
@@ -28,4 +28,8 @@ export default {
 
 <style lang="css" scoped>
 @import "./assets/iconfont.css";
+.icon {
+  color: #666;
+  font-size: 20px;
+}
 </style>

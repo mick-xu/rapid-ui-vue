@@ -1,0 +1,150 @@
+@import "../styles/themes/default.less";
+
+@message-prefix: rapid-message;
+
+@message-default-border-color: fade(@default-color, 85%);
+@message-default-bg-color: @white;
+@message-default-icon-color: @default-color;
+@message-default-text-color: @dark-color;
+
+@message-dark-border-color: fade(@dark-color, 100%);
+@message-dark-bg-color: fade(@dark-color, 85%);
+@message-dark-icon-color: @dark-color;
+@message-dark-text-color: @light-color;
+
+@message-success-border-color: ~`colorPalette("@{success-color}", 3) `;
+@message-success-bg-color: ~`colorPalette("@{success-color}", 1) `;
+@message-success-icon-color: @success-color;
+
+@message-info-border-color: ~`colorPalette("@{info-color}", 3) `;
+@message-info-bg-color: ~`colorPalette("@{info-color}", 1) `;
+@message-info-icon-color: @info-color;
+
+@message-warning-border-color: ~`colorPalette("@{warning-color}", 3) `;
+@message-warning-bg-color: ~`colorPalette("@{warning-color}", 1) `;
+@message-warning-icon-color: @warning-color;
+
+@message-error-border-color: ~`colorPalette("@{error-color}", 3) `;
+@message-error-bg-color: ~`colorPalette("@{error-color}", 1) `;
+@message-error-icon-color: @error-color;
+
+.@{message-prefix} {
+  position: fixed;
+  top: 41px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  padding: 8px 16px;
+  border: solid 1px @message-default-border-color;
+  background: @message-default-bg-color;
+  transition: top 0.3s ease-in-out;
+
+  i.icon {
+    margin-right: 8px;
+  }
+
+  span {
+    vertical-align: middle;
+    line-height: @line-height-base;
+  }
+
+  &-default {
+    border-color: @message-default-border-color;
+    background: @message-default-bg-color;
+    span {
+      color: @message-default-text-color;
+    }
+  }
+
+  &-success {
+    i.icon {
+      color: @message-success-icon-color;
+    }
+  }
+  &-error {
+    i.icon {
+      color: @message-error-icon-color;
+    }
+  }
+  &-warning {
+    i.icon {
+      color: @message-warning-icon-color;
+    }
+  }
+  &-info {
+    i.icon {
+      color: @message-info-icon-color;
+    }
+  }
+
+  &-loading {
+    i.icon {
+      color: @message-default-icon-color;
+    }
+  }
+
+  &-success-fill {
+    border-color: @message-success-border-color;
+    background: @message-success-bg-color;
+    span {
+      color: @message-success-icon-color;
+    }
+  }
+
+  &-error-fill {
+    border-color: @message-error-border-color;
+    background: @message-error-bg-color;
+    span {
+      color: @message-error-icon-color;
+    }
+  }
+
+  &-warning-fill {
+    border-color: @message-warning-border-color;
+    background: @message-warning-bg-color;
+    span {
+      color: @message-warning-icon-color;
+    }
+  }
+
+  &-info-fill {
+    border-color: @message-info-border-color;
+    background: @message-info-bg-color;
+    span {
+      color: @message-info-icon-color;
+    }
+  }
+}
+
+.message-enter-active {
+  animation: MessageMoveIn 0.3s;
+  transition: opacity 0.3s ease;
+}
+
+.message-leave-active {
+  animation: MessageMoveOut 0.3s;
+  transition: opacity 0.3s ease;
+}
+
+@keyframes MessageMoveIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -49px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes MessageMoveOut {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -49px);
+  }
+}
