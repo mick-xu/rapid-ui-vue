@@ -56,6 +56,7 @@ import {
   onUnmounted,
   nextTick,
   onUpdated,
+  watch,
 } from "vue";
 export default {
   name: "Focus",
@@ -63,7 +64,8 @@ export default {
     autoplay: { type: Boolean, default: true },
     interval: { type: Number, default: 3000 },
   },
-  setup(props) {
+  emits: ["onChange"],
+  setup(props, { emit }) {
     const classes = computed(() => {
       return ["focus"];
     });
@@ -130,6 +132,15 @@ export default {
     onUnmounted(() => {
       stopTimer();
     });
+
+    watch(
+      () => data.activeUid,
+      (current, prev) => {
+        let currentIndex = items.value.indexOf(current);
+        let prevIndex = items.value.indexOf(prev);
+        emit("onChange", currentIndex, prevIndex);
+      }
+    );
 
     provide("FocusScope", {
       data,

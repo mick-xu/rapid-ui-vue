@@ -23,7 +23,7 @@
           </Focus>
         </Col>
         <Col span="12">
-          <Focus>
+          <Focus @onChange="changeHandler">
             <FocusItem title="1" desc="">
               <img :src="`${ossPath}/bg-autumn.jpg`" alt="" />
             </FocusItem>
@@ -104,7 +104,10 @@ export default {
     <div class="slider slider-5">幻灯片五</div>\n\
   </FocusItem>\n\
 </Focus>';
-    return { ossPath, code };
+    const changeHandler = (current, prev) => {
+      console.log(current, prev);
+    };
+    return { ossPath, code, changeHandler };
   },
 };
 </script>
