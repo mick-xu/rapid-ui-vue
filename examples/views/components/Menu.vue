@@ -4,7 +4,7 @@
     <section>
       <Row>
         <Col span="24">
-          <Menu>
+          <Menu style="font-size:16px">
             <MenuItem>首页</MenuItem>
             <MenuItem>新闻</MenuItem>
             <MenuItem>关于我们</MenuItem>

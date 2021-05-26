@@ -51,6 +51,7 @@
     padding: @menu-item-padding;
     white-space: nowrap;
     cursor: pointer;
+    box-sizing: border-box;
   }
 
   &-vertical,
@@ -84,9 +85,11 @@
 
   &-horizontal {
     line-height: @menu-horizontal-line-height;
+    height: @menu-horizontal-line-height;
     border: 0;
     // border-bottom: @border-width-base @border-style-base @border-color-split;
     box-shadow: none;
+    box-sizing: border-box;
 
     &:not(.@{menu-prefix-cls}-dark) {
       > .@{menu-prefix-cls}-item,
@@ -94,15 +97,16 @@
         margin: @menu-item-padding;
         margin-top: -1px;
         margin-bottom: 0;
-        padding: @menu-item-padding;
-        padding-right: 0;
-        padding-left: 0;
+        box-sizing: border-box;
 
         &:hover,
         &-active,
         &-open,
         &-selected {
           color: @menu-highlight-color;
+        }
+
+        &-selected {
           border-bottom: 2px solid @menu-highlight-color;
         }
       }
@@ -111,10 +115,13 @@
     > .@{menu-prefix-cls}-item,
     > .@{menu-prefix-cls}-submenu {
       position: relative;
-      top: 1px;
+      top: 0px;
       display: inline-block;
       vertical-align: bottom;
       border-bottom: 2px solid transparent;
+      height: inherit;
+      line-height: inherit;
+      transition: all 0.3s ease-out;
     }
 
     > .@{menu-prefix-cls}-submenu > .@{menu-prefix-cls}-submenu-title {
@@ -150,7 +157,7 @@
   &-submenu-active,
   &-submenu-title:hover {
     color: @menu-highlight-color;
-    transition: color 0.3s;
+    transition: all 0.3s ease-in;
   }
 
   &-item-selected {
