@@ -31,35 +31,35 @@ import { getCurrentInstance } from "vue";
 export default {
   components: { Article, Code },
   setup() {
-    const { ctx } = getCurrentInstance();
+    const { proxy } = getCurrentInstance();
     const clickHandler = (e) => {
       switch (e.target.innerText) {
         case "信息":
-          ctx.Message.info("系统发来的信息！");
+          proxy.Message.info("系统发来的信息！");
           break;
         case "成功":
-          ctx.Message.success("处理成功的消息！");
+          proxy.Message.success("处理成功的消息！");
           break;
         case "警告":
-          ctx.Message.warning("系统发来的警告信息！");
+          proxy.Message.warning("系统发来的警告信息！");
           break;
         case "失败":
-          ctx.Message.error("处理失败的消息！");
+          proxy.Message.error("处理失败的消息！");
           break;
         case "信息(背景)":
-          ctx.Message.info({ message: "系统发来的信息！", fill: true });
+          proxy.Message.info({ message: "系统发来的信息！", fill: true });
           break;
         case "成功(背景)":
-          ctx.Message.success({ message: "处理成功的消息！", fill: true });
+          proxy.Message.success({ message: "处理成功的消息！", fill: true });
           break;
         case "警告(背景)":
-          ctx.Message.warning({ message: "系统发来的警告信息！", fill: true });
+          proxy.Message.warning({ message: "系统发来的警告信息！", fill: true });
           break;
         case "失败(背景)":
-          ctx.Message.error({ message: "处理失败的消息！", fill: true });
+          proxy.Message.error({ message: "处理失败的消息！", fill: true });
           break;
         default:
-          ctx.Message("默认消息！");
+          proxy.Message("默认消息！");
           break;
       }
     };
